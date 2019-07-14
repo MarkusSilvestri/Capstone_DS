@@ -1,0 +1,3544 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a8cc2dd081c74b30b8bbbe6fed42a1a8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+     <div style=”position: fixed; 
+     bottom: 50px; left: 50px; width: 100px; height: 90px; 
+     border:2px solid grey; z-index:9999; font-size:14px;>
+     <font size="5" style="color:black">Cluster Analysis ("Noise" points left out): </font><br>
+     <font size="4" style="color:blue">Ice Cream, </font>
+     <font size="3"style="color:black"> Coffee, </font>
+     <font size="3"style="color:Red">Beer. </font>
+      </div>
+    
+    
+            <div class="folium-map" id="map_a8cc2dd081c74b30b8bbbe6fed42a1a8" ></div>
+        
+</body>
+<script>    
+    
+            var map_a8cc2dd081c74b30b8bbbe6fed42a1a8 = L.map(
+                "map_a8cc2dd081c74b30b8bbbe6fed42a1a8",
+                {
+                    center: [43.157285, -77.615214],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dcc9d553d3314bfc91350fc3e7f699db = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a8cc2dd081c74b30b8bbbe6fed42a1a8);
+        
+    
+            var feature_group_db4d7d688d7945ab95fae2d8ab342193 = L.featureGroup(
+                {}
+            ).addTo(map_a8cc2dd081c74b30b8bbbe6fed42a1a8);
+        
+    
+            var circle_marker_80d8892d649443cbb9b248b9373e548a = L.circleMarker(
+                [43.14279290437174, -77.60170211778873],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_044577cf749d4d69b8c1736df0cf1de2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b04b6a3a4afb463b991173f2ccfc19b5 = $(`<div id="html_b04b6a3a4afb463b991173f2ccfc19b5" style="width: 100.0%; height: 100.0%;">Tap & Mallet</div>`)[0];
+            popup_044577cf749d4d69b8c1736df0cf1de2.setContent(html_b04b6a3a4afb463b991173f2ccfc19b5);
+        
+
+        circle_marker_80d8892d649443cbb9b248b9373e548a.bindPopup(popup_044577cf749d4d69b8c1736df0cf1de2)
+        ;
+
+        
+    
+    
+            var circle_marker_889203a454e14e6293ae9a8fddac75a2 = L.circleMarker(
+                [43.14252410085478, -77.60448204675349],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_f963738b042a42d2932794edd6001016 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5b8d0c4dd8d548a897effef2cdc0697c = $(`<div id="html_5b8d0c4dd8d548a897effef2cdc0697c" style="width: 100.0%; height: 100.0%;">Lux Lounge</div>`)[0];
+            popup_f963738b042a42d2932794edd6001016.setContent(html_5b8d0c4dd8d548a897effef2cdc0697c);
+        
+
+        circle_marker_889203a454e14e6293ae9a8fddac75a2.bindPopup(popup_f963738b042a42d2932794edd6001016)
+        ;
+
+        
+    
+    
+            var circle_marker_67647c1939aa4a67b3a8866fe6d1caed = L.circleMarker(
+                [43.13994264137564, -77.59601490103059],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_6bfafd23190e4a46a511c9c5119382a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2004196ac404d109618c06b7974cfc1 = $(`<div id="html_f2004196ac404d109618c06b7974cfc1" style="width: 100.0%; height: 100.0%;">The Angry Goat Pub</div>`)[0];
+            popup_6bfafd23190e4a46a511c9c5119382a6.setContent(html_f2004196ac404d109618c06b7974cfc1);
+        
+
+        circle_marker_67647c1939aa4a67b3a8866fe6d1caed.bindPopup(popup_6bfafd23190e4a46a511c9c5119382a6)
+        ;
+
+        
+    
+    
+            var circle_marker_40532a03812847af96c09fdcfdbe6935 = L.circleMarker(
+                [43.14201, -77.59815],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_aed90fab59a54e2786fa1b48fbe5bcf2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_370f3a7b4ddf49679294ad46f6f03afe = $(`<div id="html_370f3a7b4ddf49679294ad46f6f03afe" style="width: 100.0%; height: 100.0%;">The Firehouse Saloon</div>`)[0];
+            popup_aed90fab59a54e2786fa1b48fbe5bcf2.setContent(html_370f3a7b4ddf49679294ad46f6f03afe);
+        
+
+        circle_marker_40532a03812847af96c09fdcfdbe6935.bindPopup(popup_aed90fab59a54e2786fa1b48fbe5bcf2)
+        ;
+
+        
+    
+    
+            var circle_marker_c398e1354219485f9f4c1c94acb97c9e = L.circleMarker(
+                [43.14279290437174, -77.60170211778873],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_92c7a64dc8d040f4a016608d7a8ebaaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1639b172ce364a139d32db09d3dd516b = $(`<div id="html_1639b172ce364a139d32db09d3dd516b" style="width: 100.0%; height: 100.0%;">Tap & Mallet</div>`)[0];
+            popup_92c7a64dc8d040f4a016608d7a8ebaaf.setContent(html_1639b172ce364a139d32db09d3dd516b);
+        
+
+        circle_marker_c398e1354219485f9f4c1c94acb97c9e.bindPopup(popup_92c7a64dc8d040f4a016608d7a8ebaaf)
+        ;
+
+        
+    
+    
+            var circle_marker_ab1e29b17d2f4e22988d7487b9acf3f1 = L.circleMarker(
+                [43.13994264137564, -77.59601490103059],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_0aa9c4c708e44bba9d7717d144247d9e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_215a12c5d8b147a48c7ef60f1c43e1fc = $(`<div id="html_215a12c5d8b147a48c7ef60f1c43e1fc" style="width: 100.0%; height: 100.0%;">The Angry Goat Pub</div>`)[0];
+            popup_0aa9c4c708e44bba9d7717d144247d9e.setContent(html_215a12c5d8b147a48c7ef60f1c43e1fc);
+        
+
+        circle_marker_ab1e29b17d2f4e22988d7487b9acf3f1.bindPopup(popup_0aa9c4c708e44bba9d7717d144247d9e)
+        ;
+
+        
+    
+    
+            var circle_marker_249b266b63434847a103bc184455396b = L.circleMarker(
+                [43.140871680225985, -77.60490494301675],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_14822d350550454ab41b38a9a50658ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_640003bb8c06482f8ebc2810e98b2cfa = $(`<div id="html_640003bb8c06482f8ebc2810e98b2cfa" style="width: 100.0%; height: 100.0%;">Caverly's Irish Pub</div>`)[0];
+            popup_14822d350550454ab41b38a9a50658ca.setContent(html_640003bb8c06482f8ebc2810e98b2cfa);
+        
+
+        circle_marker_249b266b63434847a103bc184455396b.bindPopup(popup_14822d350550454ab41b38a9a50658ca)
+        ;
+
+        
+    
+    
+            var circle_marker_5b020ca6c2b9474f93f2864bf785d37c = L.circleMarker(
+                [43.1390792777672, -77.59998944106515],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_cdec5eb63fc84505b94b77a439690723 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10f58b399c8943e68a668bd847381cc7 = $(`<div id="html_10f58b399c8943e68a668bd847381cc7" style="width: 100.0%; height: 100.0%;">Dicky's Corner Pub</div>`)[0];
+            popup_cdec5eb63fc84505b94b77a439690723.setContent(html_10f58b399c8943e68a668bd847381cc7);
+        
+
+        circle_marker_5b020ca6c2b9474f93f2864bf785d37c.bindPopup(popup_cdec5eb63fc84505b94b77a439690723)
+        ;
+
+        
+    
+    
+            var circle_marker_71a4b6cebc184f569dc37d72bfce48fd = L.circleMarker(
+                [43.15339006638696, -77.5977196022586],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_d0cc411493684266bc654f53bcb088c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6838b2fa2fa443d90f403d94e3b04a5 = $(`<div id="html_d6838b2fa2fa443d90f403d94e3b04a5" style="width: 100.0%; height: 100.0%;">Roc Brewing Co., LLC</div>`)[0];
+            popup_d0cc411493684266bc654f53bcb088c0.setContent(html_d6838b2fa2fa443d90f403d94e3b04a5);
+        
+
+        circle_marker_71a4b6cebc184f569dc37d72bfce48fd.bindPopup(popup_d0cc411493684266bc654f53bcb088c0)
+        ;
+
+        
+    
+    
+            var circle_marker_f61f130c50054e9e96fe0243309a41b7 = L.circleMarker(
+                [43.1465666497306, -77.59384578099016],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_7b9240341dba45c3be84919e7c4328d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e2a23bd6bc940d089a821048b6c9c96 = $(`<div id="html_0e2a23bd6bc940d089a821048b6c9c96" style="width: 100.0%; height: 100.0%;">Acme Bar & Pizza</div>`)[0];
+            popup_7b9240341dba45c3be84919e7c4328d6.setContent(html_0e2a23bd6bc940d089a821048b6c9c96);
+        
+
+        circle_marker_f61f130c50054e9e96fe0243309a41b7.bindPopup(popup_7b9240341dba45c3be84919e7c4328d6)
+        ;
+
+        
+    
+    
+            var circle_marker_338fb5bbad4f4cd69620b069e37f0784 = L.circleMarker(
+                [43.163587585298075, -77.61466826646357],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_f6e5ef8546d74b50b7cce25e72e03383 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f697b9df63314c3da76fbf59f170d444 = $(`<div id="html_f697b9df63314c3da76fbf59f170d444" style="width: 100.0%; height: 100.0%;">The Genesee Brew House</div>`)[0];
+            popup_f6e5ef8546d74b50b7cce25e72e03383.setContent(html_f697b9df63314c3da76fbf59f170d444);
+        
+
+        circle_marker_338fb5bbad4f4cd69620b069e37f0784.bindPopup(popup_f6e5ef8546d74b50b7cce25e72e03383)
+        ;
+
+        
+    
+    
+            var circle_marker_823cb892a85348879f2fbd7e0378ab01 = L.circleMarker(
+                [43.156725342197625, -77.60148346424101],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_28717fb8f0c248e4be004fa038db2b69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_84703529efae4bce8e7fe15398f0a733 = $(`<div id="html_84703529efae4bce8e7fe15398f0a733" style="width: 100.0%; height: 100.0%;">Salinger's</div>`)[0];
+            popup_28717fb8f0c248e4be004fa038db2b69.setContent(html_84703529efae4bce8e7fe15398f0a733);
+        
+
+        circle_marker_823cb892a85348879f2fbd7e0378ab01.bindPopup(popup_28717fb8f0c248e4be004fa038db2b69)
+        ;
+
+        
+    
+    
+            var circle_marker_716cee02e9184ab784724e7da04af753 = L.circleMarker(
+                [43.138998, -77.58003],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_ac031f8580374e919bbc1da11fff2d89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eff082deb0304fc189c8da46fdefc573 = $(`<div id="html_eff082deb0304fc189c8da46fdefc573" style="width: 100.0%; height: 100.0%;">Jeremiah's Tavern</div>`)[0];
+            popup_ac031f8580374e919bbc1da11fff2d89.setContent(html_eff082deb0304fc189c8da46fdefc573);
+        
+
+        circle_marker_716cee02e9184ab784724e7da04af753.bindPopup(popup_ac031f8580374e919bbc1da11fff2d89)
+        ;
+
+        
+    
+    
+            var circle_marker_f68a265248b9456b89e38ac3ffbbe49c = L.circleMarker(
+                [43.153653956840195, -77.59536243959808],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_0f9438422458422081fb8568e861b53b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e5d83ad2a284829948fdebfad30e5e9 = $(`<div id="html_4e5d83ad2a284829948fdebfad30e5e9" style="width: 100.0%; height: 100.0%;">The Old Toad</div>`)[0];
+            popup_0f9438422458422081fb8568e861b53b.setContent(html_4e5d83ad2a284829948fdebfad30e5e9);
+        
+
+        circle_marker_f68a265248b9456b89e38ac3ffbbe49c.bindPopup(popup_0f9438422458422081fb8568e861b53b)
+        ;
+
+        
+    
+    
+            var circle_marker_0e3a2d9038114f51a44267f8c0a4f1f3 = L.circleMarker(
+                [43.16026567962581, -77.60426251628991],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_565f1c5c5b22413190adfcc5a710e8d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a28c247afad449928df183b6b4d6b5d7 = $(`<div id="html_a28c247afad449928df183b6b4d6b5d7" style="width: 100.0%; height: 100.0%;">Abilene Bar & Lounge</div>`)[0];
+            popup_565f1c5c5b22413190adfcc5a710e8d6.setContent(html_a28c247afad449928df183b6b4d6b5d7);
+        
+
+        circle_marker_0e3a2d9038114f51a44267f8c0a4f1f3.bindPopup(popup_565f1c5c5b22413190adfcc5a710e8d6)
+        ;
+
+        
+    
+    
+            var circle_marker_8f669f66f3844838a780e7091af74ce4 = L.circleMarker(
+                [43.15031013374717, -77.6005922800794],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_56a3b58b76a14b9786e23f79af097e86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae90fc0134764e448da569cdb043326f = $(`<div id="html_ae90fc0134764e448da569cdb043326f" style="width: 100.0%; height: 100.0%;">Marshall Street Bar & Grill</div>`)[0];
+            popup_56a3b58b76a14b9786e23f79af097e86.setContent(html_ae90fc0134764e448da569cdb043326f);
+        
+
+        circle_marker_8f669f66f3844838a780e7091af74ce4.bindPopup(popup_56a3b58b76a14b9786e23f79af097e86)
+        ;
+
+        
+    
+    
+            var circle_marker_13b5ba0e923b493e8d931d0f29afec44 = L.circleMarker(
+                [43.15686208101337, -77.60113480372108],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_7229c27eef3a4d3681a629a548711d89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe5280b6889e42379aafe5732711a970 = $(`<div id="html_fe5280b6889e42379aafe5732711a970" style="width: 100.0%; height: 100.0%;">Unter Biergarten</div>`)[0];
+            popup_7229c27eef3a4d3681a629a548711d89.setContent(html_fe5280b6889e42379aafe5732711a970);
+        
+
+        circle_marker_13b5ba0e923b493e8d931d0f29afec44.bindPopup(popup_7229c27eef3a4d3681a629a548711d89)
+        ;
+
+        
+    
+    
+            var circle_marker_26cad8a1d2d246c2aaed722270b2e71c = L.circleMarker(
+                [43.15880753630394, -77.59784176144348],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_61fb7a43015e47f8a649544a5064c7a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4950824f17404c74970a5c95183faa27 = $(`<div id="html_4950824f17404c74970a5c95183faa27" style="width: 100.0%; height: 100.0%;">Richmond's Tavern</div>`)[0];
+            popup_61fb7a43015e47f8a649544a5064c7a7.setContent(html_4950824f17404c74970a5c95183faa27);
+        
+
+        circle_marker_26cad8a1d2d246c2aaed722270b2e71c.bindPopup(popup_61fb7a43015e47f8a649544a5064c7a7)
+        ;
+
+        
+    
+    
+            var circle_marker_7f2f949cb2844fccbc8b3a68af9a9433 = L.circleMarker(
+                [43.14979827960238, -77.58622548840256],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_1545ad795b24479f8de06d2f8dd35b81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de8ddabd0b934edeae8f020628e456a9 = $(`<div id="html_de8ddabd0b934edeae8f020628e456a9" style="width: 100.0%; height: 100.0%;">Half Pint Pub</div>`)[0];
+            popup_1545ad795b24479f8de06d2f8dd35b81.setContent(html_de8ddabd0b934edeae8f020628e456a9);
+        
+
+        circle_marker_7f2f949cb2844fccbc8b3a68af9a9433.bindPopup(popup_1545ad795b24479f8de06d2f8dd35b81)
+        ;
+
+        
+    
+    
+            var circle_marker_5291076c81874d498f63158c4ab84256 = L.circleMarker(
+                [43.15412418365754, -77.59767017788052],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_33916461ed3744f6a184724e68df5f5e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_abbd79af9c51471fbe599ed6487c022c = $(`<div id="html_abbd79af9c51471fbe599ed6487c022c" style="width: 100.0%; height: 100.0%;">Skylark Lounge</div>`)[0];
+            popup_33916461ed3744f6a184724e68df5f5e.setContent(html_abbd79af9c51471fbe599ed6487c022c);
+        
+
+        circle_marker_5291076c81874d498f63158c4ab84256.bindPopup(popup_33916461ed3744f6a184724e68df5f5e)
+        ;
+
+        
+    
+    
+            var circle_marker_5c7761b9bd714594a6910d2f4632e181 = L.circleMarker(
+                [43.15445307732853, -77.58984563209526],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_e28cdcca97e4435d94f7ccc25ce24206 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6257ffa4c223459aa08c191c8756908e = $(`<div id="html_6257ffa4c223459aa08c191c8756908e" style="width: 100.0%; height: 100.0%;">Hattie's</div>`)[0];
+            popup_e28cdcca97e4435d94f7ccc25ce24206.setContent(html_6257ffa4c223459aa08c191c8756908e);
+        
+
+        circle_marker_5c7761b9bd714594a6910d2f4632e181.bindPopup(popup_e28cdcca97e4435d94f7ccc25ce24206)
+        ;
+
+        
+    
+    
+            var circle_marker_efeb8b204cb04315a0688b65a38e7fde = L.circleMarker(
+                [43.148116511409484, -77.57806364928688],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_12cbd2a38cb4484b86ce1b02ac7b3000 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64d12e0d59ed41499013226216173f39 = $(`<div id="html_64d12e0d59ed41499013226216173f39" style="width: 100.0%; height: 100.0%;">Blu Wolf Bistro</div>`)[0];
+            popup_12cbd2a38cb4484b86ce1b02ac7b3000.setContent(html_64d12e0d59ed41499013226216173f39);
+        
+
+        circle_marker_efeb8b204cb04315a0688b65a38e7fde.bindPopup(popup_12cbd2a38cb4484b86ce1b02ac7b3000)
+        ;
+
+        
+    
+    
+            var circle_marker_8b2079a2f3b144128a36f386fb383c8e = L.circleMarker(
+                [43.15381312542328, -77.5954040025597],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_d478a46d328948cb8cd746499d0d3d2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a324c61c939b49daa5c78a2fdd0a304e = $(`<div id="html_a324c61c939b49daa5c78a2fdd0a304e" style="width: 100.0%; height: 100.0%;">Swan Dive</div>`)[0];
+            popup_d478a46d328948cb8cd746499d0d3d2d.setContent(html_a324c61c939b49daa5c78a2fdd0a304e);
+        
+
+        circle_marker_8b2079a2f3b144128a36f386fb383c8e.bindPopup(popup_d478a46d328948cb8cd746499d0d3d2d)
+        ;
+
+        
+    
+    
+            var circle_marker_b4da017b83144354a8a24d298b83092a = L.circleMarker(
+                [43.159176242599855, -77.59730960527293],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_71ffb447964d4055b3ad3a5c35e4b216 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1bab46cee68b49cf92c19682a0305b02 = $(`<div id="html_1bab46cee68b49cf92c19682a0305b02" style="width: 100.0%; height: 100.0%;">Joey's</div>`)[0];
+            popup_71ffb447964d4055b3ad3a5c35e4b216.setContent(html_1bab46cee68b49cf92c19682a0305b02);
+        
+
+        circle_marker_b4da017b83144354a8a24d298b83092a.bindPopup(popup_71ffb447964d4055b3ad3a5c35e4b216)
+        ;
+
+        
+    
+    
+            var circle_marker_d8d71522c06c459e9e708c4097381c10 = L.circleMarker(
+                [43.15012251765158, -77.60002169181473],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_f1a5826c66dc48559daac416fef8a806 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8c0e64d93394aed89c571160a7da643 = $(`<div id="html_e8c0e64d93394aed89c571160a7da643" style="width: 100.0%; height: 100.0%;">The Bug Jar</div>`)[0];
+            popup_f1a5826c66dc48559daac416fef8a806.setContent(html_e8c0e64d93394aed89c571160a7da643);
+        
+
+        circle_marker_d8d71522c06c459e9e708c4097381c10.bindPopup(popup_f1a5826c66dc48559daac416fef8a806)
+        ;
+
+        
+    
+    
+            var circle_marker_64b4223d9a0d46cca6ca8a3a9f1e38d1 = L.circleMarker(
+                [43.155108629542006, -77.59455264603983],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_c0ab29e027334bce8e7760c71162c1be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7bbf8d8bdaf64b099bf18d73107058a5 = $(`<div id="html_7bbf8d8bdaf64b099bf18d73107058a5" style="width: 100.0%; height: 100.0%;">Murphy's Law</div>`)[0];
+            popup_c0ab29e027334bce8e7760c71162c1be.setContent(html_7bbf8d8bdaf64b099bf18d73107058a5);
+        
+
+        circle_marker_64b4223d9a0d46cca6ca8a3a9f1e38d1.bindPopup(popup_c0ab29e027334bce8e7760c71162c1be)
+        ;
+
+        
+    
+    
+            var circle_marker_31f399ee0ce8405a9c517827e98b4fbf = L.circleMarker(
+                [43.147439437650455, -77.57641321203718],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_890c7dcf23af45d1b092fb12c8c5a5c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a3d684c85ad649c9b3c41b7d87da0543 = $(`<div id="html_a3d684c85ad649c9b3c41b7d87da0543" style="width: 100.0%; height: 100.0%;">Dragonfly Tavern & Pizza Factory</div>`)[0];
+            popup_890c7dcf23af45d1b092fb12c8c5a5c8.setContent(html_a3d684c85ad649c9b3c41b7d87da0543);
+        
+
+        circle_marker_31f399ee0ce8405a9c517827e98b4fbf.bindPopup(popup_890c7dcf23af45d1b092fb12c8c5a5c8)
+        ;
+
+        
+    
+    
+            var circle_marker_a74bb5fd36c140b7b3711ea93c6cc494 = L.circleMarker(
+                [43.14692415264193, -77.59410550602172],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_53e4b471a03e42a6860a98de8e1ecccd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d24ea78b4084866b189c7cd2d9bd857 = $(`<div id="html_8d24ea78b4084866b189c7cd2d9bd857" style="width: 100.0%; height: 100.0%;">O'Callaghan's Pub</div>`)[0];
+            popup_53e4b471a03e42a6860a98de8e1ecccd.setContent(html_8d24ea78b4084866b189c7cd2d9bd857);
+        
+
+        circle_marker_a74bb5fd36c140b7b3711ea93c6cc494.bindPopup(popup_53e4b471a03e42a6860a98de8e1ecccd)
+        ;
+
+        
+    
+    
+            var circle_marker_f9130b209bde4ffcb71212e8bdcd581f = L.circleMarker(
+                [43.156801990227265, -77.60117988919049],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_66caf23f1b9c4bbc859e5049d220b71a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_460cc72052424078af1e51f6a0ad8d27 = $(`<div id="html_460cc72052424078af1e51f6a0ad8d27" style="width: 100.0%; height: 100.0%;">Temple Bar & Grille</div>`)[0];
+            popup_66caf23f1b9c4bbc859e5049d220b71a.setContent(html_460cc72052424078af1e51f6a0ad8d27);
+        
+
+        circle_marker_f9130b209bde4ffcb71212e8bdcd581f.bindPopup(popup_66caf23f1b9c4bbc859e5049d220b71a)
+        ;
+
+        
+    
+    
+            var circle_marker_d4ddfdc6f8994ba79144565d9efc0a27 = L.circleMarker(
+                [43.14223, -77.57666],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_e7e427d519484cd4808cc38c21ef161e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_118496c6ef594c72a1d0d9126282d8fa = $(`<div id="html_118496c6ef594c72a1d0d9126282d8fa" style="width: 100.0%; height: 100.0%;">The Restaurant At The Armory (TRATA)</div>`)[0];
+            popup_e7e427d519484cd4808cc38c21ef161e.setContent(html_118496c6ef594c72a1d0d9126282d8fa);
+        
+
+        circle_marker_d4ddfdc6f8994ba79144565d9efc0a27.bindPopup(popup_e7e427d519484cd4808cc38c21ef161e)
+        ;
+
+        
+    
+    
+            var circle_marker_fd216a37a7d545c8923fad9292bb0707 = L.circleMarker(
+                [43.14484779618603, -77.59059798742278],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_302e5280de7141cf8ea78565d5433e6d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae96a0498a3d40a9bceed0722aa2a6e8 = $(`<div id="html_ae96a0498a3d40a9bceed0722aa2a6e8" style="width: 100.0%; height: 100.0%;">J.D. Oxford's</div>`)[0];
+            popup_302e5280de7141cf8ea78565d5433e6d.setContent(html_ae96a0498a3d40a9bceed0722aa2a6e8);
+        
+
+        circle_marker_fd216a37a7d545c8923fad9292bb0707.bindPopup(popup_302e5280de7141cf8ea78565d5433e6d)
+        ;
+
+        
+    
+    
+            var circle_marker_fe6780ad358f4c6891605c3bce08fe17 = L.circleMarker(
+                [43.14986149232529, -77.5992165983494],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_ff71aabb0cb2400aa446bb1d9edde266 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10659459dc7443e798cd87ff012c1cf6 = $(`<div id="html_10659459dc7443e798cd87ff012c1cf6" style="width: 100.0%; height: 100.0%;">Brickwood Grill</div>`)[0];
+            popup_ff71aabb0cb2400aa446bb1d9edde266.setContent(html_10659459dc7443e798cd87ff012c1cf6);
+        
+
+        circle_marker_fe6780ad358f4c6891605c3bce08fe17.bindPopup(popup_ff71aabb0cb2400aa446bb1d9edde266)
+        ;
+
+        
+    
+    
+            var circle_marker_9b41aad029074f3bb72e9dc770e05e21 = L.circleMarker(
+                [43.156519063966364, -77.59944615689976],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_327906c80eb145608eb025f3d53e50c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_943be1e87ec14f18a393f42aa10fc7a5 = $(`<div id="html_943be1e87ec14f18a393f42aa10fc7a5" style="width: 100.0%; height: 100.0%;">Flour City Station (former Milestones Site)</div>`)[0];
+            popup_327906c80eb145608eb025f3d53e50c4.setContent(html_943be1e87ec14f18a393f42aa10fc7a5);
+        
+
+        circle_marker_9b41aad029074f3bb72e9dc770e05e21.bindPopup(popup_327906c80eb145608eb025f3d53e50c4)
+        ;
+
+        
+    
+    
+            var circle_marker_20987079a6cd42e1b003e2ed1b7936d9 = L.circleMarker(
+                [43.15537383515092, -77.59429363788611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_8e7900d1ebcc45cb8f46bb2713900c62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f29206b5662b435ea8d88df27c0ab2b0 = $(`<div id="html_f29206b5662b435ea8d88df27c0ab2b0" style="width: 100.0%; height: 100.0%;">Masons on Alexander</div>`)[0];
+            popup_8e7900d1ebcc45cb8f46bb2713900c62.setContent(html_f29206b5662b435ea8d88df27c0ab2b0);
+        
+
+        circle_marker_20987079a6cd42e1b003e2ed1b7936d9.bindPopup(popup_8e7900d1ebcc45cb8f46bb2713900c62)
+        ;
+
+        
+    
+    
+            var circle_marker_ca59574c57da4fb0aed9de46f2fa61d0 = L.circleMarker(
+                [43.154032121294534, -77.59508907567766],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_8639c26caf5a4c48b68d9e88a268a83f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_627db1feede5473cbc71adc6ff0c743e = $(`<div id="html_627db1feede5473cbc71adc6ff0c743e" style="width: 100.0%; height: 100.0%;">The Daily Refresher</div>`)[0];
+            popup_8639c26caf5a4c48b68d9e88a268a83f.setContent(html_627db1feede5473cbc71adc6ff0c743e);
+        
+
+        circle_marker_ca59574c57da4fb0aed9de46f2fa61d0.bindPopup(popup_8639c26caf5a4c48b68d9e88a268a83f)
+        ;
+
+        
+    
+    
+            var circle_marker_9ef5d347768f4b2da017ce2cdbf48aa6 = L.circleMarker(
+                [43.155642733488264, -77.58387606806555],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_1e5933c1099e4458b8a038503d294008 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_529b200d31f14d3aaa3b648070f5ca6c = $(`<div id="html_529b200d31f14d3aaa3b648070f5ca6c" style="width: 100.0%; height: 100.0%;">Edibles Restaurant</div>`)[0];
+            popup_1e5933c1099e4458b8a038503d294008.setContent(html_529b200d31f14d3aaa3b648070f5ca6c);
+        
+
+        circle_marker_9ef5d347768f4b2da017ce2cdbf48aa6.bindPopup(popup_1e5933c1099e4458b8a038503d294008)
+        ;
+
+        
+    
+    
+            var circle_marker_784f7934ab3a438a8ec5d7c874ba4a72 = L.circleMarker(
+                [43.146407263749666, -77.5923396422949],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_e72ce666440f4d0bb3d150dd2302e1a4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bb95bbcf1e934d16a5a286536a830393 = $(`<div id="html_bb95bbcf1e934d16a5a286536a830393" style="width: 100.0%; height: 100.0%;">The Scotch House Pub</div>`)[0];
+            popup_e72ce666440f4d0bb3d150dd2302e1a4.setContent(html_bb95bbcf1e934d16a5a286536a830393);
+        
+
+        circle_marker_784f7934ab3a438a8ec5d7c874ba4a72.bindPopup(popup_e72ce666440f4d0bb3d150dd2302e1a4)
+        ;
+
+        
+    
+    
+            var circle_marker_59c9386716f54bd2a2aa13053dbb8e94 = L.circleMarker(
+                [43.163587585298075, -77.61466826646357],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_ccade3add32246b3a2b28bcca8ee22da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5146a3960f46421faa74325d339bc7d6 = $(`<div id="html_5146a3960f46421faa74325d339bc7d6" style="width: 100.0%; height: 100.0%;">The Genesee Brew House</div>`)[0];
+            popup_ccade3add32246b3a2b28bcca8ee22da.setContent(html_5146a3960f46421faa74325d339bc7d6);
+        
+
+        circle_marker_59c9386716f54bd2a2aa13053dbb8e94.bindPopup(popup_ccade3add32246b3a2b28bcca8ee22da)
+        ;
+
+        
+    
+    
+            var circle_marker_c0bddc9518244be1b1cffaf9e04440eb = L.circleMarker(
+                [43.153653956840195, -77.59536243959808],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_6e0255f21f574428b0b2711dec5849a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_353a02be0a5e4cf38681d058f377c8c5 = $(`<div id="html_353a02be0a5e4cf38681d058f377c8c5" style="width: 100.0%; height: 100.0%;">The Old Toad</div>`)[0];
+            popup_6e0255f21f574428b0b2711dec5849a0.setContent(html_353a02be0a5e4cf38681d058f377c8c5);
+        
+
+        circle_marker_c0bddc9518244be1b1cffaf9e04440eb.bindPopup(popup_6e0255f21f574428b0b2711dec5849a0)
+        ;
+
+        
+    
+    
+            var circle_marker_b1822750a8d541208eaa29b5692057d3 = L.circleMarker(
+                [43.153653956840195, -77.59536243959808],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_a28391ab68854450a93a95f27be065d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fe0d6d5b9704148a5e85c0fabd0d3ed = $(`<div id="html_4fe0d6d5b9704148a5e85c0fabd0d3ed" style="width: 100.0%; height: 100.0%;">The Old Toad</div>`)[0];
+            popup_a28391ab68854450a93a95f27be065d7.setContent(html_4fe0d6d5b9704148a5e85c0fabd0d3ed);
+        
+
+        circle_marker_b1822750a8d541208eaa29b5692057d3.bindPopup(popup_a28391ab68854450a93a95f27be065d7)
+        ;
+
+        
+    
+    
+            var circle_marker_f47aad50c1dd43a99d9436de1512c3f3 = L.circleMarker(
+                [43.163587585298075, -77.61466826646357],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_1df8f54ba2bc410cb53bc07c69799cd6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a26f208bc1c64bf6b1a8eef4ccac2830 = $(`<div id="html_a26f208bc1c64bf6b1a8eef4ccac2830" style="width: 100.0%; height: 100.0%;">The Genesee Brew House</div>`)[0];
+            popup_1df8f54ba2bc410cb53bc07c69799cd6.setContent(html_a26f208bc1c64bf6b1a8eef4ccac2830);
+        
+
+        circle_marker_f47aad50c1dd43a99d9436de1512c3f3.bindPopup(popup_1df8f54ba2bc410cb53bc07c69799cd6)
+        ;
+
+        
+    
+    
+            var circle_marker_11ce7e0db61a414fbac17d27600c0ba1 = L.circleMarker(
+                [43.16042181693848, -77.61038657796355],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_15342518056e4136882ee68e9684985f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_847d8dcb9b2943eaa3a37504502e8b3b = $(`<div id="html_847d8dcb9b2943eaa3a37504502e8b3b" style="width: 100.0%; height: 100.0%;">Scotland Yard Pub</div>`)[0];
+            popup_15342518056e4136882ee68e9684985f.setContent(html_847d8dcb9b2943eaa3a37504502e8b3b);
+        
+
+        circle_marker_11ce7e0db61a414fbac17d27600c0ba1.bindPopup(popup_15342518056e4136882ee68e9684985f)
+        ;
+
+        
+    
+    
+            var circle_marker_746adc7afdc44d8494bcd9e2ed5a8ae4 = L.circleMarker(
+                [43.14979827960238, -77.58622548840256],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_f8a0076e803f4417b2d9538d1152d138 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23e0cc9e8e1a4fe284587b5494fc1e08 = $(`<div id="html_23e0cc9e8e1a4fe284587b5494fc1e08" style="width: 100.0%; height: 100.0%;">Half Pint Pub</div>`)[0];
+            popup_f8a0076e803f4417b2d9538d1152d138.setContent(html_23e0cc9e8e1a4fe284587b5494fc1e08);
+        
+
+        circle_marker_746adc7afdc44d8494bcd9e2ed5a8ae4.bindPopup(popup_f8a0076e803f4417b2d9538d1152d138)
+        ;
+
+        
+    
+    
+            var circle_marker_9353f2f22edf4fc987f23ff832c559b0 = L.circleMarker(
+                [43.14692415264193, -77.59410550602172],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_20aba20510b44432a8211bc40d7e84b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8191f07574d1479b9d80948aaed67d6f = $(`<div id="html_8191f07574d1479b9d80948aaed67d6f" style="width: 100.0%; height: 100.0%;">O'Callaghan's Pub</div>`)[0];
+            popup_20aba20510b44432a8211bc40d7e84b7.setContent(html_8191f07574d1479b9d80948aaed67d6f);
+        
+
+        circle_marker_9353f2f22edf4fc987f23ff832c559b0.bindPopup(popup_20aba20510b44432a8211bc40d7e84b7)
+        ;
+
+        
+    
+    
+            var circle_marker_76de98d3f9924bb8a1539c4072aa58b1 = L.circleMarker(
+                [43.15031013374717, -77.6005922800794],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_c55d127e5fca4904b0e9ebbb9cfc6bc1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5136619140d485aaf4e709db6f247d4 = $(`<div id="html_d5136619140d485aaf4e709db6f247d4" style="width: 100.0%; height: 100.0%;">Marshall Street Bar & Grill</div>`)[0];
+            popup_c55d127e5fca4904b0e9ebbb9cfc6bc1.setContent(html_d5136619140d485aaf4e709db6f247d4);
+        
+
+        circle_marker_76de98d3f9924bb8a1539c4072aa58b1.bindPopup(popup_c55d127e5fca4904b0e9ebbb9cfc6bc1)
+        ;
+
+        
+    
+    
+            var circle_marker_498977cbb67a447fa5f6e181b5bc41d1 = L.circleMarker(
+                [43.14613535585977, -77.59279253107933],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_bb53493e81f545739eea00d42fa3d5d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb8a72e201174ac999eb88cff18e95fc = $(`<div id="html_eb8a72e201174ac999eb88cff18e95fc" style="width: 100.0%; height: 100.0%;">The Avenue Pub</div>`)[0];
+            popup_bb53493e81f545739eea00d42fa3d5d2.setContent(html_eb8a72e201174ac999eb88cff18e95fc);
+        
+
+        circle_marker_498977cbb67a447fa5f6e181b5bc41d1.bindPopup(popup_bb53493e81f545739eea00d42fa3d5d2)
+        ;
+
+        
+    
+    
+            var circle_marker_2df7323d510d4e649584ccd113035e2c = L.circleMarker(
+                [43.148154154948415, -77.57813335528229],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_a34928a763524b718dacf4fa649c17e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96328f94685946d993dff4efc2e727b2 = $(`<div id="html_96328f94685946d993dff4efc2e727b2" style="width: 100.0%; height: 100.0%;">Magpie Irish Pub</div>`)[0];
+            popup_a34928a763524b718dacf4fa649c17e4.setContent(html_96328f94685946d993dff4efc2e727b2);
+        
+
+        circle_marker_2df7323d510d4e649584ccd113035e2c.bindPopup(popup_a34928a763524b718dacf4fa649c17e4)
+        ;
+
+        
+    
+    
+            var circle_marker_fb3b73dd0b464c0da43b5062abc0c13e = L.circleMarker(
+                [43.14743576750726, -77.59515596635866],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_e3fec3c06d364e8c84007b14ef7a871f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9afc7a9ea5324960a26fbc49f84c7831 = $(`<div id="html_9afc7a9ea5324960a26fbc49f84c7831" style="width: 100.0%; height: 100.0%;">The Park Bench</div>`)[0];
+            popup_e3fec3c06d364e8c84007b14ef7a871f.setContent(html_9afc7a9ea5324960a26fbc49f84c7831);
+        
+
+        circle_marker_fb3b73dd0b464c0da43b5062abc0c13e.bindPopup(popup_e3fec3c06d364e8c84007b14ef7a871f)
+        ;
+
+        
+    
+    
+            var circle_marker_bd05abd5103545eba273e313bc0e0d58 = L.circleMarker(
+                [43.14567796801097, -77.5919086325144],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_6283409dfae740f2bcb0c89ea696397a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77b96c81e608444fab640d85deae92d7 = $(`<div id="html_77b96c81e608444fab640d85deae92d7" style="width: 100.0%; height: 100.0%;">Enright's Thirst Parlor</div>`)[0];
+            popup_6283409dfae740f2bcb0c89ea696397a.setContent(html_77b96c81e608444fab640d85deae92d7);
+        
+
+        circle_marker_bd05abd5103545eba273e313bc0e0d58.bindPopup(popup_6283409dfae740f2bcb0c89ea696397a)
+        ;
+
+        
+    
+    
+            var circle_marker_dd30ac4cfb954e75ab251ea738e365d5 = L.circleMarker(
+                [43.144924561979714, -77.5907366300089],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_a9105433dc494b7180db2f9091b42425 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9716de6ef4cb4be899e7978e2be159e7 = $(`<div id="html_9716de6ef4cb4be899e7978e2be159e7" style="width: 100.0%; height: 100.0%;">Turcott's Taproom</div>`)[0];
+            popup_a9105433dc494b7180db2f9091b42425.setContent(html_9716de6ef4cb4be899e7978e2be159e7);
+        
+
+        circle_marker_dd30ac4cfb954e75ab251ea738e365d5.bindPopup(popup_a9105433dc494b7180db2f9091b42425)
+        ;
+
+        
+    
+    
+            var circle_marker_8da84e1d8be64321a9249a5f5ed9b090 = L.circleMarker(
+                [43.1419296460684, -77.58544854201799],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_5818249e7d5c4db4b0b72a2aa0f47c79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_226efdfb6cc6474cb571b79036188cbc = $(`<div id="html_226efdfb6cc6474cb571b79036188cbc" style="width: 100.0%; height: 100.0%;">The Rosen Krown</div>`)[0];
+            popup_5818249e7d5c4db4b0b72a2aa0f47c79.setContent(html_226efdfb6cc6474cb571b79036188cbc);
+        
+
+        circle_marker_8da84e1d8be64321a9249a5f5ed9b090.bindPopup(popup_5818249e7d5c4db4b0b72a2aa0f47c79)
+        ;
+
+        
+    
+    
+            var circle_marker_b571708f53c346dd9ba3e9941618be7d = L.circleMarker(
+                [43.156535766671944, -77.56116744682781],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_810889e801fc40cea47a3b4d19605c2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc2bb36ea63942b887f5859bfaa19ea7 = $(`<div id="html_cc2bb36ea63942b887f5859bfaa19ea7" style="width: 100.0%; height: 100.0%;">Jack Ryan's</div>`)[0];
+            popup_810889e801fc40cea47a3b4d19605c2f.setContent(html_cc2bb36ea63942b887f5859bfaa19ea7);
+        
+
+        circle_marker_b571708f53c346dd9ba3e9941618be7d.bindPopup(popup_810889e801fc40cea47a3b4d19605c2f)
+        ;
+
+        
+    
+    
+            var circle_marker_5ed82515bb8e4fdd8fbc085c52ea8ed3 = L.circleMarker(
+                [43.15972206312713, -77.56020860696171],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_f30b7b487ed041f8bcdf42dddaa21ff8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb2a9512dfc643c0a9c2355f4d383aaa = $(`<div id="html_fb2a9512dfc643c0a9c2355f4d383aaa" style="width: 100.0%; height: 100.0%;">Main Place Tavern</div>`)[0];
+            popup_f30b7b487ed041f8bcdf42dddaa21ff8.setContent(html_fb2a9512dfc643c0a9c2355f4d383aaa);
+        
+
+        circle_marker_5ed82515bb8e4fdd8fbc085c52ea8ed3.bindPopup(popup_f30b7b487ed041f8bcdf42dddaa21ff8)
+        ;
+
+        
+    
+    
+            var circle_marker_58678f3a2160439598730b698ff687be = L.circleMarker(
+                [43.16001651981753, -77.56397532229373],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_3619b2570ed147cfb6ef0600c66da7a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5a557621997427faa99c63462c46c0b = $(`<div id="html_b5a557621997427faa99c63462c46c0b" style="width: 100.0%; height: 100.0%;">Carroll's</div>`)[0];
+            popup_3619b2570ed147cfb6ef0600c66da7a1.setContent(html_b5a557621997427faa99c63462c46c0b);
+        
+
+        circle_marker_58678f3a2160439598730b698ff687be.bindPopup(popup_3619b2570ed147cfb6ef0600c66da7a1)
+        ;
+
+        
+    
+    
+            var circle_marker_5ed00910b27747418e004a392f272b96 = L.circleMarker(
+                [43.15834683012279, -77.54852258068738],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_144b90445db74083a2ccd2a1f27cd727 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dad15b7ed4314e56a99bfea4edc76cc5 = $(`<div id="html_dad15b7ed4314e56a99bfea4edc76cc5" style="width: 100.0%; height: 100.0%;">Silver Iguana</div>`)[0];
+            popup_144b90445db74083a2ccd2a1f27cd727.setContent(html_dad15b7ed4314e56a99bfea4edc76cc5);
+        
+
+        circle_marker_5ed00910b27747418e004a392f272b96.bindPopup(popup_144b90445db74083a2ccd2a1f27cd727)
+        ;
+
+        
+    
+    
+            var circle_marker_8b9abcba2b744b529586175234bbe58a = L.circleMarker(
+                [43.15852692171938, -77.54847968289965],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_10302c0d7a304722a73a6e79928e318e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0960551e5a4a4c468721ef8193316a08 = $(`<div id="html_0960551e5a4a4c468721ef8193316a08" style="width: 100.0%; height: 100.0%;">Mayfield's Pub</div>`)[0];
+            popup_10302c0d7a304722a73a6e79928e318e.setContent(html_0960551e5a4a4c468721ef8193316a08);
+        
+
+        circle_marker_8b9abcba2b744b529586175234bbe58a.bindPopup(popup_10302c0d7a304722a73a6e79928e318e)
+        ;
+
+        
+    
+    
+            var circle_marker_f5e0d71032d84c8abe7ed01e101e2d18 = L.circleMarker(
+                [43.159310074033094, -77.54921002160677],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_7b81af59f8694ac79c7b51cf5b4b04bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe1e5f56cd554b1395a0801d26acc832 = $(`<div id="html_fe1e5f56cd554b1395a0801d26acc832" style="width: 100.0%; height: 100.0%;">Tryon City Tavern</div>`)[0];
+            popup_7b81af59f8694ac79c7b51cf5b4b04bf.setContent(html_fe1e5f56cd554b1395a0801d26acc832);
+        
+
+        circle_marker_f5e0d71032d84c8abe7ed01e101e2d18.bindPopup(popup_7b81af59f8694ac79c7b51cf5b4b04bf)
+        ;
+
+        
+    
+    
+            var circle_marker_b76300768a9648ee96030f99ce836e3e = L.circleMarker(
+                [43.0924173595771, -77.65071429304031],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_256c7d95c5514ba482c26302110ee9f4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a3d2e45a4c0e412bb85bc8e594819eaf = $(`<div id="html_a3d2e45a4c0e412bb85bc8e594819eaf" style="width: 100.0%; height: 100.0%;">MacGregor's Grill & Tap Room</div>`)[0];
+            popup_256c7d95c5514ba482c26302110ee9f4.setContent(html_a3d2e45a4c0e412bb85bc8e594819eaf);
+        
+
+        circle_marker_b76300768a9648ee96030f99ce836e3e.bindPopup(popup_256c7d95c5514ba482c26302110ee9f4)
+        ;
+
+        
+    
+    
+            var circle_marker_7545770becbf488c8f398a14f3370267 = L.circleMarker(
+                [43.0924173595771, -77.65071429304031],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_b4a20716d52b49f4b873b682101345c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13bd927e5c6644f385ea312cb8eddc89 = $(`<div id="html_13bd927e5c6644f385ea312cb8eddc89" style="width: 100.0%; height: 100.0%;">MacGregor's Grill & Tap Room</div>`)[0];
+            popup_b4a20716d52b49f4b873b682101345c3.setContent(html_13bd927e5c6644f385ea312cb8eddc89);
+        
+
+        circle_marker_7545770becbf488c8f398a14f3370267.bindPopup(popup_b4a20716d52b49f4b873b682101345c3)
+        ;
+
+        
+    
+    
+            var circle_marker_35bd336dec884f8ea70cf7f29200bf27 = L.circleMarker(
+                [43.091353, -77.655953],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_b916f38fd06f4f2597d3b45e78af4d7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_282ccd4540c24faeb57ad3075edf8c93 = $(`<div id="html_282ccd4540c24faeb57ad3075edf8c93" style="width: 100.0%; height: 100.0%;">Schramrocks Irish Pub</div>`)[0];
+            popup_b916f38fd06f4f2597d3b45e78af4d7c.setContent(html_282ccd4540c24faeb57ad3075edf8c93);
+        
+
+        circle_marker_35bd336dec884f8ea70cf7f29200bf27.bindPopup(popup_b916f38fd06f4f2597d3b45e78af4d7c)
+        ;
+
+        
+    
+    
+            var circle_marker_73f779a08fbe47b8970a70be052a722b = L.circleMarker(
+                [43.25064, -77.61143],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_87c66587ee0d4eafa001ae2ccb7b29ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ee4d2ccb60d0484497748861895c706f = $(`<div id="html_ee4d2ccb60d0484497748861895c706f" style="width: 100.0%; height: 100.0%;">Whiskey River Pub & Grill</div>`)[0];
+            popup_87c66587ee0d4eafa001ae2ccb7b29ed.setContent(html_ee4d2ccb60d0484497748861895c706f);
+        
+
+        circle_marker_73f779a08fbe47b8970a70be052a722b.bindPopup(popup_87c66587ee0d4eafa001ae2ccb7b29ed)
+        ;
+
+        
+    
+    
+            var circle_marker_23ed014f67a3415c83adc8a383f9b386 = L.circleMarker(
+                [43.253358383526525, -77.60894285714781],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_937f2cf4bd2d43b083a8febb855da17e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e4a9fcaf8dc431bab56a0884727bc1e = $(`<div id="html_4e4a9fcaf8dc431bab56a0884727bc1e" style="width: 100.0%; height: 100.0%;">Pelican's Nest Restaurant</div>`)[0];
+            popup_937f2cf4bd2d43b083a8febb855da17e.setContent(html_4e4a9fcaf8dc431bab56a0884727bc1e);
+        
+
+        circle_marker_23ed014f67a3415c83adc8a383f9b386.bindPopup(popup_937f2cf4bd2d43b083a8febb855da17e)
+        ;
+
+        
+    
+    
+            var circle_marker_c37e9f0237a9486fa200411c8b2c911f = L.circleMarker(
+                [43.25133642073333, -77.60876921300584],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_3a086514ddf74279be600001647615df = L.popup({"maxWidth": "100%"});
+
+        
+            var html_01495b0ba4b14c9990b6960ad5ed436f = $(`<div id="html_01495b0ba4b14c9990b6960ad5ed436f" style="width: 100.0%; height: 100.0%;">Schooner's Riverside</div>`)[0];
+            popup_3a086514ddf74279be600001647615df.setContent(html_01495b0ba4b14c9990b6960ad5ed436f);
+        
+
+        circle_marker_c37e9f0237a9486fa200411c8b2c911f.bindPopup(popup_3a086514ddf74279be600001647615df)
+        ;
+
+        
+    
+    
+            var circle_marker_02eac06fb039435887ecc9c8b55ca002 = L.circleMarker(
+                [43.25637519625059, -77.61019568692554],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_fc193b1648e54d5a9b6a4239b81ed011 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46adacbd579c4bcaa2eb5b7739c797a2 = $(`<div id="html_46adacbd579c4bcaa2eb5b7739c797a2" style="width: 100.0%; height: 100.0%;">WindJammers</div>`)[0];
+            popup_fc193b1648e54d5a9b6a4239b81ed011.setContent(html_46adacbd579c4bcaa2eb5b7739c797a2);
+        
+
+        circle_marker_02eac06fb039435887ecc9c8b55ca002.bindPopup(popup_fc193b1648e54d5a9b6a4239b81ed011)
+        ;
+
+        
+    
+    
+            var circle_marker_f93dd11073c9431cadf1d7a33660a97b = L.circleMarker(
+                [43.25623542450698, -77.60358066149858],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_792e952c70cc488fb63a9d28370a414c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c83b756826c6470c9e7709ac60e80dc8 = $(`<div id="html_c83b756826c6470c9e7709ac60e80dc8" style="width: 100.0%; height: 100.0%;">O'Loughlin's Silk Restaurant</div>`)[0];
+            popup_792e952c70cc488fb63a9d28370a414c.setContent(html_c83b756826c6470c9e7709ac60e80dc8);
+        
+
+        circle_marker_f93dd11073c9431cadf1d7a33660a97b.bindPopup(popup_792e952c70cc488fb63a9d28370a414c)
+        ;
+
+        
+    
+    
+            var circle_marker_88f0d432449848a1bc6440d0cb9115d2 = L.circleMarker(
+                [43.14338719325458, -77.70861971707826],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_bec54972239446d2b12f0574c4ababe1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_518887925113438e86063c45416ffdcc = $(`<div id="html_518887925113438e86063c45416ffdcc" style="width: 100.0%; height: 100.0%;">585 Rockin Burger Bar</div>`)[0];
+            popup_bec54972239446d2b12f0574c4ababe1.setContent(html_518887925113438e86063c45416ffdcc);
+        
+
+        circle_marker_88f0d432449848a1bc6440d0cb9115d2.bindPopup(popup_bec54972239446d2b12f0574c4ababe1)
+        ;
+
+        
+    
+    
+            var circle_marker_c7f015f4c9ce4b93b0b058201adcd5ec = L.circleMarker(
+                [43.14774504898097, -77.71011402542446],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_02b2dd03655c4a8f8206333e40dc226a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9941f7fd3ae44042b3c87873d31677b4 = $(`<div id="html_9941f7fd3ae44042b3c87873d31677b4" style="width: 100.0%; height: 100.0%;">Jeremiah's Tavern</div>`)[0];
+            popup_02b2dd03655c4a8f8206333e40dc226a.setContent(html_9941f7fd3ae44042b3c87873d31677b4);
+        
+
+        circle_marker_c7f015f4c9ce4b93b0b058201adcd5ec.bindPopup(popup_02b2dd03655c4a8f8206333e40dc226a)
+        ;
+
+        
+    
+    
+            var circle_marker_e6caefc31ea04cf389508f3d2adafa60 = L.circleMarker(
+                [43.14681240490407, -77.7098247206086],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_a520f1993c9a4837aaf9c21270ccfdae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4e1feb93d2244818f40f9efe507919b = $(`<div id="html_c4e1feb93d2244818f40f9efe507919b" style="width: 100.0%; height: 100.0%;">MacGregors' Grill and Tap Room</div>`)[0];
+            popup_a520f1993c9a4837aaf9c21270ccfdae.setContent(html_c4e1feb93d2244818f40f9efe507919b);
+        
+
+        circle_marker_e6caefc31ea04cf389508f3d2adafa60.bindPopup(popup_a520f1993c9a4837aaf9c21270ccfdae)
+        ;
+
+        
+    
+    
+            var circle_marker_c857c9a7662d4dc6b824da27b383c887 = L.circleMarker(
+                [43.09069713918376, -77.5149133907208],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_b00458651e1c4c82b4826c51096b48d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c6b2256ee5e84ef99408f144c0088f8b = $(`<div id="html_c6b2256ee5e84ef99408f144c0088f8b" style="width: 100.0%; height: 100.0%;">Thirsty's</div>`)[0];
+            popup_b00458651e1c4c82b4826c51096b48d6.setContent(html_c6b2256ee5e84ef99408f144c0088f8b);
+        
+
+        circle_marker_c857c9a7662d4dc6b824da27b383c887.bindPopup(popup_b00458651e1c4c82b4826c51096b48d6)
+        ;
+
+        
+    
+    
+            var circle_marker_35c281e2048e42fabe510dad3abcaf51 = L.circleMarker(
+                [43.09069713918376, -77.5149133907208],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_d859036f105d41e887e40104cb68e3a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af93c8719681462f8844922ea031da65 = $(`<div id="html_af93c8719681462f8844922ea031da65" style="width: 100.0%; height: 100.0%;">Thirsty's</div>`)[0];
+            popup_d859036f105d41e887e40104cb68e3a0.setContent(html_af93c8719681462f8844922ea031da65);
+        
+
+        circle_marker_35c281e2048e42fabe510dad3abcaf51.bindPopup(popup_d859036f105d41e887e40104cb68e3a0)
+        ;
+
+        
+    
+    
+            var circle_marker_4e5fdaa4efde42f1bae960049b016b10 = L.circleMarker(
+                [43.09475446703043, -77.51340626372668],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_d5b4e8bad2b04b8b8aeb8ecce9406cfc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_625a5df2c38e404cb64901f751cb3571 = $(`<div id="html_625a5df2c38e404cb64901f751cb3571" style="width: 100.0%; height: 100.0%;">Pittsford Pub</div>`)[0];
+            popup_d5b4e8bad2b04b8b8aeb8ecce9406cfc.setContent(html_625a5df2c38e404cb64901f751cb3571);
+        
+
+        circle_marker_4e5fdaa4efde42f1bae960049b016b10.bindPopup(popup_d5b4e8bad2b04b8b8aeb8ecce9406cfc)
+        ;
+
+        
+    
+    
+            var circle_marker_e798dbfe562949588f17131ce814ae41 = L.circleMarker(
+                [43.23521797029537, -77.53765624318643],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_ff4ed4232eb04879a27940a25bd7cd84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_852487c050934775834e1cb85de1b68d = $(`<div id="html_852487c050934775834e1cb85de1b68d" style="width: 100.0%; height: 100.0%;">Marge's Lakeside Inn</div>`)[0];
+            popup_ff4ed4232eb04879a27940a25bd7cd84.setContent(html_852487c050934775834e1cb85de1b68d);
+        
+
+        circle_marker_e798dbfe562949588f17131ce814ae41.bindPopup(popup_ff4ed4232eb04879a27940a25bd7cd84)
+        ;
+
+        
+    
+    
+            var circle_marker_4e36170592a94b56a5d8b9d1ba6c43a3 = L.circleMarker(
+                [43.231438199461884, -77.54451736680896],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_ac21b2eb60c44bcd946fe5e552029f22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f41e9627c1634270b4369f11e549764d = $(`<div id="html_f41e9627c1634270b4369f11e549764d" style="width: 100.0%; height: 100.0%;">Shamrock Jack's Irish Pub</div>`)[0];
+            popup_ac21b2eb60c44bcd946fe5e552029f22.setContent(html_f41e9627c1634270b4369f11e549764d);
+        
+
+        circle_marker_4e36170592a94b56a5d8b9d1ba6c43a3.bindPopup(popup_ac21b2eb60c44bcd946fe5e552029f22)
+        ;
+
+        
+    
+    
+            var circle_marker_a076b304fbe34835bc56f005f77e3836 = L.circleMarker(
+                [43.23437969295688, -77.53957966025197],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_db4d7d688d7945ab95fae2d8ab342193);
+        
+    
+        var popup_b7935c48d7ba4e87827e325d0e4d4ed1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c819c09c8f624db78c9843ff1381f45c = $(`<div id="html_c819c09c8f624db78c9843ff1381f45c" style="width: 100.0%; height: 100.0%;">Bill Gray's Sea Breeze</div>`)[0];
+            popup_b7935c48d7ba4e87827e325d0e4d4ed1.setContent(html_c819c09c8f624db78c9843ff1381f45c);
+        
+
+        circle_marker_a076b304fbe34835bc56f005f77e3836.bindPopup(popup_b7935c48d7ba4e87827e325d0e4d4ed1)
+        ;
+
+        
+    
+    
+            var feature_group_ee7046201b2b4c548687e8fcb475bda2 = L.featureGroup(
+                {}
+            ).addTo(map_a8cc2dd081c74b30b8bbbe6fed42a1a8);
+        
+    
+            var circle_marker_aec524b60740407ab249ca190e64b707 = L.circleMarker(
+                [43.157443, -77.601449],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_01007d25b0274512b282d036a83d7069 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_040b21bd6dad43bfbbb0e4042dde537f = $(`<div id="html_040b21bd6dad43bfbbb0e4042dde537f" style="width: 100.0%; height: 100.0%;">Java's Cafe</div>`)[0];
+            popup_01007d25b0274512b282d036a83d7069.setContent(html_040b21bd6dad43bfbbb0e4042dde537f);
+        
+
+        circle_marker_aec524b60740407ab249ca190e64b707.bindPopup(popup_01007d25b0274512b282d036a83d7069)
+        ;
+
+        
+    
+    
+            var circle_marker_28646a529b264ef0981a58fd0ab8a7f7 = L.circleMarker(
+                [43.156421954372405, -77.59910462292507],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_fa28a6a2ac3948308a2b9deef2d76444 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ff304488f524c6e9898b27178c36617 = $(`<div id="html_5ff304488f524c6e9898b27178c36617" style="width: 100.0%; height: 100.0%;">Spot Coffee</div>`)[0];
+            popup_fa28a6a2ac3948308a2b9deef2d76444.setContent(html_5ff304488f524c6e9898b27178c36617);
+        
+
+        circle_marker_28646a529b264ef0981a58fd0ab8a7f7.bindPopup(popup_fa28a6a2ac3948308a2b9deef2d76444)
+        ;
+
+        
+    
+    
+            var circle_marker_4b0e44a1dd5048c3a7e587b0242b622c = L.circleMarker(
+                [43.15730284341931, -77.59688386902077],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_517884aa9dbd4db9b645b72ec1ccf364 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_87b63f9b660846899c49aa137e1133d2 = $(`<div id="html_87b63f9b660846899c49aa137e1133d2" style="width: 100.0%; height: 100.0%;">Ugly Duck Coffee</div>`)[0];
+            popup_517884aa9dbd4db9b645b72ec1ccf364.setContent(html_87b63f9b660846899c49aa137e1133d2);
+        
+
+        circle_marker_4b0e44a1dd5048c3a7e587b0242b622c.bindPopup(popup_517884aa9dbd4db9b645b72ec1ccf364)
+        ;
+
+        
+    
+    
+            var circle_marker_660e0a9c73cd435e89d9895cf8281210 = L.circleMarker(
+                [43.158800086513715, -77.59968173775405],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_820dfda75cc34fcb89ca85c25995d672 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_43bd406549b744fca9663d67d515cc7d = $(`<div id="html_43bd406549b744fca9663d67d515cc7d" style="width: 100.0%; height: 100.0%;">Press Coffee Bar</div>`)[0];
+            popup_820dfda75cc34fcb89ca85c25995d672.setContent(html_43bd406549b744fca9663d67d515cc7d);
+        
+
+        circle_marker_660e0a9c73cd435e89d9895cf8281210.bindPopup(popup_820dfda75cc34fcb89ca85c25995d672)
+        ;
+
+        
+    
+    
+            var circle_marker_1d63075a500c401ebcb468fa14875f5a = L.circleMarker(
+                [43.15217, -77.606735],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_e3b6790e1ab2424aa44ee51438d2b49c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_823d79cfb4c1436da7c603b52f52979c = $(`<div id="html_823d79cfb4c1436da7c603b52f52979c" style="width: 100.0%; height: 100.0%;">Fuego Coffee Roasters</div>`)[0];
+            popup_e3b6790e1ab2424aa44ee51438d2b49c.setContent(html_823d79cfb4c1436da7c603b52f52979c);
+        
+
+        circle_marker_1d63075a500c401ebcb468fa14875f5a.bindPopup(popup_e3b6790e1ab2424aa44ee51438d2b49c)
+        ;
+
+        
+    
+    
+            var circle_marker_444eaea35e0e44f5ba8f60db30db117c = L.circleMarker(
+                [43.156530864859796, -77.59740561652453],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_da01baa6b3704e808762ababccfce3f8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_86fccd2479ad426cbf532bf1d7bf32be = $(`<div id="html_86fccd2479ad426cbf532bf1d7bf32be" style="width: 100.0%; height: 100.0%;">The Little Cafe</div>`)[0];
+            popup_da01baa6b3704e808762ababccfce3f8.setContent(html_86fccd2479ad426cbf532bf1d7bf32be);
+        
+
+        circle_marker_444eaea35e0e44f5ba8f60db30db117c.bindPopup(popup_da01baa6b3704e808762ababccfce3f8)
+        ;
+
+        
+    
+    
+            var circle_marker_d37b412aaead408a88a213c39e52e0f9 = L.circleMarker(
+                [43.156421954372405, -77.59910462292507],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_977c632c3f034a39b7b35d8af6ccd262 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_900735bddf5c4875843e16c98aabc0a8 = $(`<div id="html_900735bddf5c4875843e16c98aabc0a8" style="width: 100.0%; height: 100.0%;">Spot Coffee</div>`)[0];
+            popup_977c632c3f034a39b7b35d8af6ccd262.setContent(html_900735bddf5c4875843e16c98aabc0a8);
+        
+
+        circle_marker_d37b412aaead408a88a213c39e52e0f9.bindPopup(popup_977c632c3f034a39b7b35d8af6ccd262)
+        ;
+
+        
+    
+    
+            var circle_marker_cbd498f2fef6410f9543723d3097f95a = L.circleMarker(
+                [43.157443, -77.601449],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_1ebd2f8aca3d4dadb25427c026cf8226 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_96ed3372053d4509bfc1cc78de7dd5a6 = $(`<div id="html_96ed3372053d4509bfc1cc78de7dd5a6" style="width: 100.0%; height: 100.0%;">Java's Cafe</div>`)[0];
+            popup_1ebd2f8aca3d4dadb25427c026cf8226.setContent(html_96ed3372053d4509bfc1cc78de7dd5a6);
+        
+
+        circle_marker_cbd498f2fef6410f9543723d3097f95a.bindPopup(popup_1ebd2f8aca3d4dadb25427c026cf8226)
+        ;
+
+        
+    
+    
+            var circle_marker_ba33bbfac788459d86ce8baa8d57c277 = L.circleMarker(
+                [43.158800086513715, -77.59968173775405],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_4cac8a1ee7b742d9b8411056b1c74133 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f3ae722fcbf4051be1a507f3289af53 = $(`<div id="html_6f3ae722fcbf4051be1a507f3289af53" style="width: 100.0%; height: 100.0%;">Press Coffee Bar</div>`)[0];
+            popup_4cac8a1ee7b742d9b8411056b1c74133.setContent(html_6f3ae722fcbf4051be1a507f3289af53);
+        
+
+        circle_marker_ba33bbfac788459d86ce8baa8d57c277.bindPopup(popup_4cac8a1ee7b742d9b8411056b1c74133)
+        ;
+
+        
+    
+    
+            var circle_marker_4feb12e797aa4f3f80c7609e0c96f98e = L.circleMarker(
+                [43.156530864859796, -77.59740561652453],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_c4528b1bcfb445c4804cdc83e7fbb513 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a6204bfdb704aada64620a6df4f6bc0 = $(`<div id="html_7a6204bfdb704aada64620a6df4f6bc0" style="width: 100.0%; height: 100.0%;">The Little Cafe</div>`)[0];
+            popup_c4528b1bcfb445c4804cdc83e7fbb513.setContent(html_7a6204bfdb704aada64620a6df4f6bc0);
+        
+
+        circle_marker_4feb12e797aa4f3f80c7609e0c96f98e.bindPopup(popup_c4528b1bcfb445c4804cdc83e7fbb513)
+        ;
+
+        
+    
+    
+            var circle_marker_e868e49369f54b7f9f46f50f19cd5945 = L.circleMarker(
+                [43.157443, -77.601449],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_bc607b54716f429eb4de3144f631eb48 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c439fb00c124e02a190456825004c0e = $(`<div id="html_8c439fb00c124e02a190456825004c0e" style="width: 100.0%; height: 100.0%;">Java's Cafe</div>`)[0];
+            popup_bc607b54716f429eb4de3144f631eb48.setContent(html_8c439fb00c124e02a190456825004c0e);
+        
+
+        circle_marker_e868e49369f54b7f9f46f50f19cd5945.bindPopup(popup_bc607b54716f429eb4de3144f631eb48)
+        ;
+
+        
+    
+    
+            var circle_marker_736566ecad6d4c2dad3d1fffb46975c4 = L.circleMarker(
+                [43.158800086513715, -77.59968173775405],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_6a0095ca29cb497da71ca627712b55e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc3a90a1c59840c9bad183d1a353d51d = $(`<div id="html_dc3a90a1c59840c9bad183d1a353d51d" style="width: 100.0%; height: 100.0%;">Press Coffee Bar</div>`)[0];
+            popup_6a0095ca29cb497da71ca627712b55e6.setContent(html_dc3a90a1c59840c9bad183d1a353d51d);
+        
+
+        circle_marker_736566ecad6d4c2dad3d1fffb46975c4.bindPopup(popup_6a0095ca29cb497da71ca627712b55e6)
+        ;
+
+        
+    
+    
+            var circle_marker_ec95d8a1708e42b09a6b21e5d41862cd = L.circleMarker(
+                [43.156421954372405, -77.59910462292507],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_a151da1393d3477b89a65dd4df4d71e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e47d3ef3faf45ed83d7366a5b3c7860 = $(`<div id="html_2e47d3ef3faf45ed83d7366a5b3c7860" style="width: 100.0%; height: 100.0%;">Spot Coffee</div>`)[0];
+            popup_a151da1393d3477b89a65dd4df4d71e3.setContent(html_2e47d3ef3faf45ed83d7366a5b3c7860);
+        
+
+        circle_marker_ec95d8a1708e42b09a6b21e5d41862cd.bindPopup(popup_a151da1393d3477b89a65dd4df4d71e3)
+        ;
+
+        
+    
+    
+            var circle_marker_c24570072ffe4b6cad5c217b5a6db3b6 = L.circleMarker(
+                [43.156530864859796, -77.59740561652453],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_836b7c1debdf4d539cf94b47af7f724b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be31d6f1eca846a89ca0c37d2c666ee3 = $(`<div id="html_be31d6f1eca846a89ca0c37d2c666ee3" style="width: 100.0%; height: 100.0%;">The Little Cafe</div>`)[0];
+            popup_836b7c1debdf4d539cf94b47af7f724b.setContent(html_be31d6f1eca846a89ca0c37d2c666ee3);
+        
+
+        circle_marker_c24570072ffe4b6cad5c217b5a6db3b6.bindPopup(popup_836b7c1debdf4d539cf94b47af7f724b)
+        ;
+
+        
+    
+    
+            var circle_marker_5a07334328e241b09be90acd7ff54e39 = L.circleMarker(
+                [43.15460363649398, -77.60798512856837],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_6cfdb29ab2474628b635304cffe8641e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_089eed97ef6541e997aaad1c920e1e97 = $(`<div id="html_089eed97ef6541e997aaad1c920e1e97" style="width: 100.0%; height: 100.0%;">Rochester Public Library</div>`)[0];
+            popup_6cfdb29ab2474628b635304cffe8641e.setContent(html_089eed97ef6541e997aaad1c920e1e97);
+        
+
+        circle_marker_5a07334328e241b09be90acd7ff54e39.bindPopup(popup_6cfdb29ab2474628b635304cffe8641e)
+        ;
+
+        
+    
+    
+            var circle_marker_333a159f63e9456c8172067e15b1f8c0 = L.circleMarker(
+                [43.15591639280804, -77.59815337102708],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_019609c6efdd4f8aacdaef2c31162209 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4404605467624b8c81bbc065326274ae = $(`<div id="html_4404605467624b8c81bbc065326274ae" style="width: 100.0%; height: 100.0%;">Orange Glory Cafe</div>`)[0];
+            popup_019609c6efdd4f8aacdaef2c31162209.setContent(html_4404605467624b8c81bbc065326274ae);
+        
+
+        circle_marker_333a159f63e9456c8172067e15b1f8c0.bindPopup(popup_019609c6efdd4f8aacdaef2c31162209)
+        ;
+
+        
+    
+    
+            var circle_marker_2cb4471842fc48288ec0b4d0938a7f72 = L.circleMarker(
+                [43.157515962413434, -77.60167681417155],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_1aba053069814e17ba384267379ea450 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5940c33f9414382b1924575bb8e7ce2 = $(`<div id="html_d5940c33f9414382b1924575bb8e7ce2" style="width: 100.0%; height: 100.0%;">Ludwig's Center Stage Cafe</div>`)[0];
+            popup_1aba053069814e17ba384267379ea450.setContent(html_d5940c33f9414382b1924575bb8e7ce2);
+        
+
+        circle_marker_2cb4471842fc48288ec0b4d0938a7f72.bindPopup(popup_1aba053069814e17ba384267379ea450)
+        ;
+
+        
+    
+    
+            var circle_marker_59576b86dca54839a72390680551ea2f = L.circleMarker(
+                [43.15523045672542, -77.60570526123047],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_f81fa8fe6fd4414c842d777cb9dc8c12 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a65c5da805f4bffa97c058c7aeae7c9 = $(`<div id="html_7a65c5da805f4bffa97c058c7aeae7c9" style="width: 100.0%; height: 100.0%;">Sweet Dawn</div>`)[0];
+            popup_f81fa8fe6fd4414c842d777cb9dc8c12.setContent(html_7a65c5da805f4bffa97c058c7aeae7c9);
+        
+
+        circle_marker_59576b86dca54839a72390680551ea2f.bindPopup(popup_f81fa8fe6fd4414c842d777cb9dc8c12)
+        ;
+
+        
+    
+    
+            var circle_marker_c308ffe56d914445ba21bb2ee6c66d42 = L.circleMarker(
+                [43.156627, -77.608696],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_b8d8579ae2644228910c7412a460b358 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d13a450d56de46f5854e2ebbc70be8c6 = $(`<div id="html_d13a450d56de46f5854e2ebbc70be8c6" style="width: 100.0%; height: 100.0%;">J&K Cafe and Catering, Inc</div>`)[0];
+            popup_b8d8579ae2644228910c7412a460b358.setContent(html_d13a450d56de46f5854e2ebbc70be8c6);
+        
+
+        circle_marker_c308ffe56d914445ba21bb2ee6c66d42.bindPopup(popup_b8d8579ae2644228910c7412a460b358)
+        ;
+
+        
+    
+    
+            var circle_marker_3e578ed0c7fe4589a4b647294ea09824 = L.circleMarker(
+                [43.15673772897342, -77.60711228685521],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_119a8f0d4aff41f7865ea5a38c99ccba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3421a7a0f2e84756999e8211e6758061 = $(`<div id="html_3421a7a0f2e84756999e8211e6758061" style="width: 100.0%; height: 100.0%;">Panini's</div>`)[0];
+            popup_119a8f0d4aff41f7865ea5a38c99ccba.setContent(html_3421a7a0f2e84756999e8211e6758061);
+        
+
+        circle_marker_3e578ed0c7fe4589a4b647294ea09824.bindPopup(popup_119a8f0d4aff41f7865ea5a38c99ccba)
+        ;
+
+        
+    
+    
+            var circle_marker_cbb3b50c906a4cf3bc0c6e772bc048e8 = L.circleMarker(
+                [43.155963, -77.606424],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_cd2483810c854f6089cecc94e9b9ea19 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_040818e2ad7b4817ba2e85d0e746a984 = $(`<div id="html_040818e2ad7b4817ba2e85d0e746a984" style="width: 100.0%; height: 100.0%;">Fina's Cafe at Clinton Square</div>`)[0];
+            popup_cd2483810c854f6089cecc94e9b9ea19.setContent(html_040818e2ad7b4817ba2e85d0e746a984);
+        
+
+        circle_marker_cbb3b50c906a4cf3bc0c6e772bc048e8.bindPopup(popup_cd2483810c854f6089cecc94e9b9ea19)
+        ;
+
+        
+    
+    
+            var circle_marker_6cf8869c4fd34e5ab18922e939dff49f = L.circleMarker(
+                [43.155056, -77.605289],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_87e8d8a284534004861d77c914f5ab08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1faabcbad3024f219423ad86cf35f1f0 = $(`<div id="html_1faabcbad3024f219423ad86cf35f1f0" style="width: 100.0%; height: 100.0%;">Café SOL</div>`)[0];
+            popup_87e8d8a284534004861d77c914f5ab08.setContent(html_1faabcbad3024f219423ad86cf35f1f0);
+        
+
+        circle_marker_6cf8869c4fd34e5ab18922e939dff49f.bindPopup(popup_87e8d8a284534004861d77c914f5ab08)
+        ;
+
+        
+    
+    
+            var circle_marker_8b0534070af34bb2bb7d0f9624ee971b = L.circleMarker(
+                [43.15435149425744, -77.6014218646939],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_c570cc5a807a4c58b83e099161837e3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc55acb7c2ec469397ab7ac02ebc66e5 = $(`<div id="html_dc55acb7c2ec469397ab7ac02ebc66e5" style="width: 100.0%; height: 100.0%;">Torres Cafe</div>`)[0];
+            popup_c570cc5a807a4c58b83e099161837e3d.setContent(html_dc55acb7c2ec469397ab7ac02ebc66e5);
+        
+
+        circle_marker_8b0534070af34bb2bb7d0f9624ee971b.bindPopup(popup_c570cc5a807a4c58b83e099161837e3d)
+        ;
+
+        
+    
+    
+            var circle_marker_5cc04a1962cc4173b4432979cd3527ee = L.circleMarker(
+                [43.15444731471546, -77.6057976315141],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_9e9ade34bc28463dbcae5bdf1206228f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3e99327572143219265a40d24097710 = $(`<div id="html_d3e99327572143219265a40d24097710" style="width: 100.0%; height: 100.0%;">Bausch & Lomb Cafeteria</div>`)[0];
+            popup_9e9ade34bc28463dbcae5bdf1206228f.setContent(html_d3e99327572143219265a40d24097710);
+        
+
+        circle_marker_5cc04a1962cc4173b4432979cd3527ee.bindPopup(popup_9e9ade34bc28463dbcae5bdf1206228f)
+        ;
+
+        
+    
+    
+            var circle_marker_a2f029ac9c494825ad5319fb7869dc7a = L.circleMarker(
+                [43.153331, -77.60461],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_2afc46678e9843c9ad0daa7e752f042e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85c29b7136ab47b7907f6fdbd541837a = $(`<div id="html_85c29b7136ab47b7907f6fdbd541837a" style="width: 100.0%; height: 100.0%;">Native Eatery & Bar</div>`)[0];
+            popup_2afc46678e9843c9ad0daa7e752f042e.setContent(html_85c29b7136ab47b7907f6fdbd541837a);
+        
+
+        circle_marker_a2f029ac9c494825ad5319fb7869dc7a.bindPopup(popup_2afc46678e9843c9ad0daa7e752f042e)
+        ;
+
+        
+    
+    
+            var circle_marker_0c56c15f32f04c518f9a8bfc6d4b1c21 = L.circleMarker(
+                [43.14067228742054, -77.60497443552775],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_45207962839b4928b1360ae84c059562 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ff7e2e2f53841949ea112897942e9bd = $(`<div id="html_3ff7e2e2f53841949ea112897942e9bd" style="width: 100.0%; height: 100.0%;">Equal Grounds Coffeeshop & Books</div>`)[0];
+            popup_45207962839b4928b1360ae84c059562.setContent(html_3ff7e2e2f53841949ea112897942e9bd);
+        
+
+        circle_marker_0c56c15f32f04c518f9a8bfc6d4b1c21.bindPopup(popup_45207962839b4928b1360ae84c059562)
+        ;
+
+        
+    
+    
+            var circle_marker_0d25533408e64e148a623abdb7c4674e = L.circleMarker(
+                [43.142268415012296, -77.6045092074514],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_a9f150934a7f4a61a949b40fbb5250ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b3669291d1114937b66a22724159c33c = $(`<div id="html_b3669291d1114937b66a22724159c33c" style="width: 100.0%; height: 100.0%;">Coffee Connection</div>`)[0];
+            popup_a9f150934a7f4a61a949b40fbb5250ad.setContent(html_b3669291d1114937b66a22724159c33c);
+        
+
+        circle_marker_0d25533408e64e148a623abdb7c4674e.bindPopup(popup_a9f150934a7f4a61a949b40fbb5250ad)
+        ;
+
+        
+    
+    
+            var circle_marker_22a8f27af4104a268186918e666b64aa = L.circleMarker(
+                [43.14067228742054, -77.60497443552775],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_9063af04798245a1b60a012ac2d126d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4144f5207f8b490eb03318d187ce2cfb = $(`<div id="html_4144f5207f8b490eb03318d187ce2cfb" style="width: 100.0%; height: 100.0%;">Equal Grounds Coffeeshop & Books</div>`)[0];
+            popup_9063af04798245a1b60a012ac2d126d4.setContent(html_4144f5207f8b490eb03318d187ce2cfb);
+        
+
+        circle_marker_22a8f27af4104a268186918e666b64aa.bindPopup(popup_9063af04798245a1b60a012ac2d126d4)
+        ;
+
+        
+    
+    
+            var circle_marker_cb0761ae293a4994a9cb629ecb344c80 = L.circleMarker(
+                [43.142268415012296, -77.6045092074514],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_3ed42b62ef4c498f9e36d323dd0c61c4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_718e158928c44df18370b1a109b57830 = $(`<div id="html_718e158928c44df18370b1a109b57830" style="width: 100.0%; height: 100.0%;">Coffee Connection</div>`)[0];
+            popup_3ed42b62ef4c498f9e36d323dd0c61c4.setContent(html_718e158928c44df18370b1a109b57830);
+        
+
+        circle_marker_cb0761ae293a4994a9cb629ecb344c80.bindPopup(popup_3ed42b62ef4c498f9e36d323dd0c61c4)
+        ;
+
+        
+    
+    
+            var circle_marker_533c08a5a91d4aeb820e20e8bed10630 = L.circleMarker(
+                [43.14067228742054, -77.60497443552775],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_785e3b3e23b846eab8dede153e6e5c9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d9be8bb262a4bdcad08d1ad4b0ab018 = $(`<div id="html_7d9be8bb262a4bdcad08d1ad4b0ab018" style="width: 100.0%; height: 100.0%;">Equal Grounds Coffeeshop & Books</div>`)[0];
+            popup_785e3b3e23b846eab8dede153e6e5c9c.setContent(html_7d9be8bb262a4bdcad08d1ad4b0ab018);
+        
+
+        circle_marker_533c08a5a91d4aeb820e20e8bed10630.bindPopup(popup_785e3b3e23b846eab8dede153e6e5c9c)
+        ;
+
+        
+    
+    
+            var circle_marker_9b9b51afbd064ea5bad54fc32c235a05 = L.circleMarker(
+                [43.142833288531946, -77.60157707508523],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_f15f7810dd92454b8b985d8d4ef415d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e438f5f121ea4f50b35ec126975a35ba = $(`<div id="html_e438f5f121ea4f50b35ec126975a35ba" style="width: 100.0%; height: 100.0%;">Tango Cafe</div>`)[0];
+            popup_f15f7810dd92454b8b985d8d4ef415d9.setContent(html_e438f5f121ea4f50b35ec126975a35ba);
+        
+
+        circle_marker_9b9b51afbd064ea5bad54fc32c235a05.bindPopup(popup_f15f7810dd92454b8b985d8d4ef415d9)
+        ;
+
+        
+    
+    
+            var circle_marker_e89502ad3dcc4356bc1c3202ef163d32 = L.circleMarker(
+                [43.142268415012296, -77.6045092074514],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_541921a35ba94edd921884ac4a8e1228 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8d184968cad449981fe713902e2203a = $(`<div id="html_d8d184968cad449981fe713902e2203a" style="width: 100.0%; height: 100.0%;">Coffee Connection</div>`)[0];
+            popup_541921a35ba94edd921884ac4a8e1228.setContent(html_d8d184968cad449981fe713902e2203a);
+        
+
+        circle_marker_e89502ad3dcc4356bc1c3202ef163d32.bindPopup(popup_541921a35ba94edd921884ac4a8e1228)
+        ;
+
+        
+    
+    
+            var circle_marker_bd78177e07c5432da32d99540ac783f0 = L.circleMarker(
+                [43.154808528828134, -77.61425530974314],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_8beeea6530114c059443c42952f64639 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1837763248a4281a458c0249a958016 = $(`<div id="html_f1837763248a4281a458c0249a958016" style="width: 100.0%; height: 100.0%;">Founders Café</div>`)[0];
+            popup_8beeea6530114c059443c42952f64639.setContent(html_f1837763248a4281a458c0249a958016);
+        
+
+        circle_marker_bd78177e07c5432da32d99540ac783f0.bindPopup(popup_8beeea6530114c059443c42952f64639)
+        ;
+
+        
+    
+    
+            var circle_marker_296d4771590e4720a01eb1d6fb4feab9 = L.circleMarker(
+                [43.154808528828134, -77.61425530974314],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_aba32d3ce7a84a308a852493ca4ee2a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fd1671424f55491bb812a336be17b1ff = $(`<div id="html_fd1671424f55491bb812a336be17b1ff" style="width: 100.0%; height: 100.0%;">Founders Café</div>`)[0];
+            popup_aba32d3ce7a84a308a852493ca4ee2a0.setContent(html_fd1671424f55491bb812a336be17b1ff);
+        
+
+        circle_marker_296d4771590e4720a01eb1d6fb4feab9.bindPopup(popup_aba32d3ce7a84a308a852493ca4ee2a0)
+        ;
+
+        
+    
+    
+            var circle_marker_b6565aa6ddf449c09f3d6d8e538e8eb2 = L.circleMarker(
+                [43.15652555555594, -77.61328981876555],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_ff92ac14fc354fafbbbabd8396ecd406 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bf23406181ce42a09c2b0f6344e51b01 = $(`<div id="html_bf23406181ce42a09c2b0f6344e51b01" style="width: 100.0%; height: 100.0%;">Grill & Greens</div>`)[0];
+            popup_ff92ac14fc354fafbbbabd8396ecd406.setContent(html_bf23406181ce42a09c2b0f6344e51b01);
+        
+
+        circle_marker_b6565aa6ddf449c09f3d6d8e538e8eb2.bindPopup(popup_ff92ac14fc354fafbbbabd8396ecd406)
+        ;
+
+        
+    
+    
+            var circle_marker_5767bd35607b44d38b1e76c1247d6826 = L.circleMarker(
+                [43.15580267717071, -77.61252488899297],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_2a1df814355649cb99204056e75c66b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7049694e0d684790a6a5a6108187bb0e = $(`<div id="html_7049694e0d684790a6a5a6108187bb0e" style="width: 100.0%; height: 100.0%;">Tim Hortons Cafe & Bake Shop</div>`)[0];
+            popup_2a1df814355649cb99204056e75c66b2.setContent(html_7049694e0d684790a6a5a6108187bb0e);
+        
+
+        circle_marker_5767bd35607b44d38b1e76c1247d6826.bindPopup(popup_2a1df814355649cb99204056e75c66b2)
+        ;
+
+        
+    
+    
+            var circle_marker_8acb590c343a4f0892894546e56b9ae1 = L.circleMarker(
+                [43.15673132131237, -77.61301502697941],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_98febc17bb9845978f8a285d9e32e404 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e94c90596174febb7142e49dabd4f40 = $(`<div id="html_4e94c90596174febb7142e49dabd4f40" style="width: 100.0%; height: 100.0%;">TJ's Cafe</div>`)[0];
+            popup_98febc17bb9845978f8a285d9e32e404.setContent(html_4e94c90596174febb7142e49dabd4f40);
+        
+
+        circle_marker_8acb590c343a4f0892894546e56b9ae1.bindPopup(popup_98febc17bb9845978f8a285d9e32e404)
+        ;
+
+        
+    
+    
+            var circle_marker_fe6a0345284546e1bb508070e3308fff = L.circleMarker(
+                [43.15588007113553, -77.61300086975098],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_00c4b9bb75ff4ecfb098b638155a92e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d974aa2912e488494c75ecf74dc3e70 = $(`<div id="html_2d974aa2912e488494c75ecf74dc3e70" style="width: 100.0%; height: 100.0%;">SAPORI Cafe & Catering</div>`)[0];
+            popup_00c4b9bb75ff4ecfb098b638155a92e7.setContent(html_2d974aa2912e488494c75ecf74dc3e70);
+        
+
+        circle_marker_fe6a0345284546e1bb508070e3308fff.bindPopup(popup_00c4b9bb75ff4ecfb098b638155a92e7)
+        ;
+
+        
+    
+    
+            var circle_marker_b81141219bad4cc48de517eec25b92db = L.circleMarker(
+                [43.15346237265332, -77.61686017282034],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_17b659a73d0243f6a44c0bdc7000f91a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_554219b0f52a477db66e8e15b7fcc533 = $(`<div id="html_554219b0f52a477db66e8e15b7fcc533" style="width: 100.0%; height: 100.0%;">Rochester Pillars</div>`)[0];
+            popup_17b659a73d0243f6a44c0bdc7000f91a.setContent(html_554219b0f52a477db66e8e15b7fcc533);
+        
+
+        circle_marker_b81141219bad4cc48de517eec25b92db.bindPopup(popup_17b659a73d0243f6a44c0bdc7000f91a)
+        ;
+
+        
+    
+    
+            var circle_marker_937513d073c242c3a1d9cb4c6f615eac = L.circleMarker(
+                [43.15339897651081, -77.61688470840454],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_67ad4991b9c0425b9ccfc30113063cce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4bac930536ef44b0bb7d55dd0b939dd3 = $(`<div id="html_4bac930536ef44b0bb7d55dd0b939dd3" style="width: 100.0%; height: 100.0%;">The Table</div>`)[0];
+            popup_67ad4991b9c0425b9ccfc30113063cce.setContent(html_4bac930536ef44b0bb7d55dd0b939dd3);
+        
+
+        circle_marker_937513d073c242c3a1d9cb4c6f615eac.bindPopup(popup_67ad4991b9c0425b9ccfc30113063cce)
+        ;
+
+        
+    
+    
+            var circle_marker_1b4b6c975d3948e4b18a0fa2cbb3f2c6 = L.circleMarker(
+                [43.14749251223111, -77.57599272435347],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_085f40773a0a4986a02731842d5597d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_81ef8f131043427abb609da00058b299 = $(`<div id="html_81ef8f131043427abb609da00058b299" style="width: 100.0%; height: 100.0%;">Cafe Sasso</div>`)[0];
+            popup_085f40773a0a4986a02731842d5597d7.setContent(html_81ef8f131043427abb609da00058b299);
+        
+
+        circle_marker_1b4b6c975d3948e4b18a0fa2cbb3f2c6.bindPopup(popup_085f40773a0a4986a02731842d5597d7)
+        ;
+
+        
+    
+    
+            var circle_marker_a3df13ff138c442197f5e510c12abe37 = L.circleMarker(
+                [43.14830360175039, -77.57845939006188],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_508087bed9a54171b8e12f8789705f2f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c9d867844cc434490062ef82bacf343 = $(`<div id="html_3c9d867844cc434490062ef82bacf343" style="width: 100.0%; height: 100.0%;">Jembetat African Gallery & Cafe</div>`)[0];
+            popup_508087bed9a54171b8e12f8789705f2f.setContent(html_3c9d867844cc434490062ef82bacf343);
+        
+
+        circle_marker_a3df13ff138c442197f5e510c12abe37.bindPopup(popup_508087bed9a54171b8e12f8789705f2f)
+        ;
+
+        
+    
+    
+            var circle_marker_8b522e1dfcfe40e6821297525da26fa6 = L.circleMarker(
+                [43.14714450978837, -77.57616425911655],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_4a269c8de063499ebd02d9a7ac67ba26 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6735ebd887654acea8a902346e1d3c6b = $(`<div id="html_6735ebd887654acea8a902346e1d3c6b" style="width: 100.0%; height: 100.0%;">Glen Edith Coffee Roasters</div>`)[0];
+            popup_4a269c8de063499ebd02d9a7ac67ba26.setContent(html_6735ebd887654acea8a902346e1d3c6b);
+        
+
+        circle_marker_8b522e1dfcfe40e6821297525da26fa6.bindPopup(popup_4a269c8de063499ebd02d9a7ac67ba26)
+        ;
+
+        
+    
+    
+            var circle_marker_916b27bf7f304ede9d561ce7c310d6fa = L.circleMarker(
+                [43.14749251223111, -77.57599272435347],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_635fdcbf469f46ea98c68234c38f0b73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c271a0873dd7458d8868c28d65edd81c = $(`<div id="html_c271a0873dd7458d8868c28d65edd81c" style="width: 100.0%; height: 100.0%;">Cafe Sasso</div>`)[0];
+            popup_635fdcbf469f46ea98c68234c38f0b73.setContent(html_c271a0873dd7458d8868c28d65edd81c);
+        
+
+        circle_marker_916b27bf7f304ede9d561ce7c310d6fa.bindPopup(popup_635fdcbf469f46ea98c68234c38f0b73)
+        ;
+
+        
+    
+    
+            var circle_marker_c458c6b462f347808dfdafd4a119d59f = L.circleMarker(
+                [43.14830360175039, -77.57845939006188],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_61970bd8c14b4988a6cc5d089c7fac7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8a0d664ab094fcba373654c1454b5f0 = $(`<div id="html_e8a0d664ab094fcba373654c1454b5f0" style="width: 100.0%; height: 100.0%;">Jembetat African Gallery & Cafe</div>`)[0];
+            popup_61970bd8c14b4988a6cc5d089c7fac7b.setContent(html_e8a0d664ab094fcba373654c1454b5f0);
+        
+
+        circle_marker_c458c6b462f347808dfdafd4a119d59f.bindPopup(popup_61970bd8c14b4988a6cc5d089c7fac7b)
+        ;
+
+        
+    
+    
+            var circle_marker_5709b738f4b04e2e8d2f26fb067485bd = L.circleMarker(
+                [43.14749251223111, -77.57599272435347],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_ef75bc72aa8043049491b906abf18cf7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d74e90cfa08415bbe714312bffd3e1d = $(`<div id="html_6d74e90cfa08415bbe714312bffd3e1d" style="width: 100.0%; height: 100.0%;">Cafe Sasso</div>`)[0];
+            popup_ef75bc72aa8043049491b906abf18cf7.setContent(html_6d74e90cfa08415bbe714312bffd3e1d);
+        
+
+        circle_marker_5709b738f4b04e2e8d2f26fb067485bd.bindPopup(popup_ef75bc72aa8043049491b906abf18cf7)
+        ;
+
+        
+    
+    
+            var circle_marker_8f53fecd8b114ed3ac61b5eea90f8048 = L.circleMarker(
+                [43.14825623964553, -77.57818655423411],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_82065503219843e381804de05c9209bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8beb5ee899604c838c0b717bd6dcfbde = $(`<div id="html_8beb5ee899604c838c0b717bd6dcfbde" style="width: 100.0%; height: 100.0%;">The Frog Pond</div>`)[0];
+            popup_82065503219843e381804de05c9209bd.setContent(html_8beb5ee899604c838c0b717bd6dcfbde);
+        
+
+        circle_marker_8f53fecd8b114ed3ac61b5eea90f8048.bindPopup(popup_82065503219843e381804de05c9209bd)
+        ;
+
+        
+    
+    
+            var circle_marker_2fb91a07d2564b969cf9e97d4caae905 = L.circleMarker(
+                [43.14714450978837, -77.57616425911655],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_05d322f32a4841e88d6db58a1047e374 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_201a317fd2e84ca7a8b4895762eee075 = $(`<div id="html_201a317fd2e84ca7a8b4895762eee075" style="width: 100.0%; height: 100.0%;">Glen Edith Coffee Roasters</div>`)[0];
+            popup_05d322f32a4841e88d6db58a1047e374.setContent(html_201a317fd2e84ca7a8b4895762eee075);
+        
+
+        circle_marker_2fb91a07d2564b969cf9e97d4caae905.bindPopup(popup_05d322f32a4841e88d6db58a1047e374)
+        ;
+
+        
+    
+    
+            var circle_marker_6fe0e9941a8b446185e049d8aba674ea = L.circleMarker(
+                [43.148103, -77.578096],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_7713f54db9574c67b381db675e8b77d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3b141c8d33a4e3c897b95768457a71c = $(`<div id="html_d3b141c8d33a4e3c897b95768457a71c" style="width: 100.0%; height: 100.0%;">Camille's Sidewalk Cafe</div>`)[0];
+            popup_7713f54db9574c67b381db675e8b77d1.setContent(html_d3b141c8d33a4e3c897b95768457a71c);
+        
+
+        circle_marker_6fe0e9941a8b446185e049d8aba674ea.bindPopup(popup_7713f54db9574c67b381db675e8b77d1)
+        ;
+
+        
+    
+    
+            var circle_marker_c0b55f16255d44249812837f7ac03287 = L.circleMarker(
+                [43.14608478899973, -77.60242413511725],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_1ac27fc805d14c51a69a63a3bf23cf7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d75687b5124b480b9d9c89958a8f8e57 = $(`<div id="html_d75687b5124b480b9d9c89958a8f8e57" style="width: 100.0%; height: 100.0%;">Boulder Coffee Co Cafe and Lounge</div>`)[0];
+            popup_1ac27fc805d14c51a69a63a3bf23cf7c.setContent(html_d75687b5124b480b9d9c89958a8f8e57);
+        
+
+        circle_marker_c0b55f16255d44249812837f7ac03287.bindPopup(popup_1ac27fc805d14c51a69a63a3bf23cf7c)
+        ;
+
+        
+    
+    
+            var circle_marker_bd203f0d37df46bda8df98eb0381ef65 = L.circleMarker(
+                [43.14608478899973, -77.60242413511725],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_6536ac5eb2634306a2eed5d624e346fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0cf573d8efc4cdeb122b118c5c32b6d = $(`<div id="html_b0cf573d8efc4cdeb122b118c5c32b6d" style="width: 100.0%; height: 100.0%;">Boulder Coffee Co Cafe and Lounge</div>`)[0];
+            popup_6536ac5eb2634306a2eed5d624e346fa.setContent(html_b0cf573d8efc4cdeb122b118c5c32b6d);
+        
+
+        circle_marker_bd203f0d37df46bda8df98eb0381ef65.bindPopup(popup_6536ac5eb2634306a2eed5d624e346fa)
+        ;
+
+        
+    
+    
+            var circle_marker_35b79e630a41442a866d9e76e6b020ab = L.circleMarker(
+                [43.14608478899973, -77.60242413511725],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_216557dd28a848bf9e360ac46e649b67 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_191fe411b34d42b895ba66092f1afe46 = $(`<div id="html_191fe411b34d42b895ba66092f1afe46" style="width: 100.0%; height: 100.0%;">Boulder Coffee Co Cafe and Lounge</div>`)[0];
+            popup_216557dd28a848bf9e360ac46e649b67.setContent(html_191fe411b34d42b895ba66092f1afe46);
+        
+
+        circle_marker_35b79e630a41442a866d9e76e6b020ab.bindPopup(popup_216557dd28a848bf9e360ac46e649b67)
+        ;
+
+        
+    
+    
+            var circle_marker_84df53118f2c467e9bb10c923e0acdfa = L.circleMarker(
+                [43.14858454365725, -77.60362499140061],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_60df61683c0d49cb8ad384bd3410a3f4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_530afc153450403b9df815239cd27474 = $(`<div id="html_530afc153450403b9df815239cd27474" style="width: 100.0%; height: 100.0%;">The Loop @ ABVI</div>`)[0];
+            popup_60df61683c0d49cb8ad384bd3410a3f4.setContent(html_530afc153450403b9df815239cd27474);
+        
+
+        circle_marker_84df53118f2c467e9bb10c923e0acdfa.bindPopup(popup_60df61683c0d49cb8ad384bd3410a3f4)
+        ;
+
+        
+    
+    
+            var circle_marker_d058503c5d9545e585c03356ee046281 = L.circleMarker(
+                [43.15566273752371, -77.57958773683403],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_7a01942dcf5a45679165cd17cb593529 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45232524eb7e4f2abee01362f79f91aa = $(`<div id="html_45232524eb7e4f2abee01362f79f91aa" style="width: 100.0%; height: 100.0%;">Glen Edith Coffee Roasters</div>`)[0];
+            popup_7a01942dcf5a45679165cd17cb593529.setContent(html_45232524eb7e4f2abee01362f79f91aa);
+        
+
+        circle_marker_d058503c5d9545e585c03356ee046281.bindPopup(popup_7a01942dcf5a45679165cd17cb593529)
+        ;
+
+        
+    
+    
+            var circle_marker_eb589471e0844528a7e793eac308a49a = L.circleMarker(
+                [43.15585035039481, -77.58412778749337],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_31c5f564a5f24fa681e698b6e0e84507 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db80a48063d3412da92e58e5cfab5f20 = $(`<div id="html_db80a48063d3412da92e58e5cfab5f20" style="width: 100.0%; height: 100.0%;">Starry Nites Cafe</div>`)[0];
+            popup_31c5f564a5f24fa681e698b6e0e84507.setContent(html_db80a48063d3412da92e58e5cfab5f20);
+        
+
+        circle_marker_eb589471e0844528a7e793eac308a49a.bindPopup(popup_31c5f564a5f24fa681e698b6e0e84507)
+        ;
+
+        
+    
+    
+            var circle_marker_e9d8175dfb874f8c9041c0ab40be69a4 = L.circleMarker(
+                [43.15585035039481, -77.58412778749337],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_6d22e1c2a7e541c58c3d8b134272d6b3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_05d4a4bfb27e41a698651a9c080f8998 = $(`<div id="html_05d4a4bfb27e41a698651a9c080f8998" style="width: 100.0%; height: 100.0%;">Starry Nites Cafe</div>`)[0];
+            popup_6d22e1c2a7e541c58c3d8b134272d6b3.setContent(html_05d4a4bfb27e41a698651a9c080f8998);
+        
+
+        circle_marker_e9d8175dfb874f8c9041c0ab40be69a4.bindPopup(popup_6d22e1c2a7e541c58c3d8b134272d6b3)
+        ;
+
+        
+    
+    
+            var circle_marker_72ea68e7b5d4432b8e038206e2d52456 = L.circleMarker(
+                [43.15499667848795, -77.58264759183032],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_8e4fc76b3762426cb2ee56c4c81fe7fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0b7280f5df542fd969de936103f0321 = $(`<div id="html_c0b7280f5df542fd969de936103f0321" style="width: 100.0%; height: 100.0%;">Chocolate and Vines</div>`)[0];
+            popup_8e4fc76b3762426cb2ee56c4c81fe7fa.setContent(html_c0b7280f5df542fd969de936103f0321);
+        
+
+        circle_marker_72ea68e7b5d4432b8e038206e2d52456.bindPopup(popup_8e4fc76b3762426cb2ee56c4c81fe7fa)
+        ;
+
+        
+    
+    
+            var circle_marker_a60a25a9afff477ba2b2f6c29c2d47bd = L.circleMarker(
+                [43.15585035039481, -77.58412778749337],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_b852851c420447d58b9a7613b0bb0e7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f8a170f54c284da9b6f7999c0349b13b = $(`<div id="html_f8a170f54c284da9b6f7999c0349b13b" style="width: 100.0%; height: 100.0%;">Starry Nites Cafe</div>`)[0];
+            popup_b852851c420447d58b9a7613b0bb0e7b.setContent(html_f8a170f54c284da9b6f7999c0349b13b);
+        
+
+        circle_marker_a60a25a9afff477ba2b2f6c29c2d47bd.bindPopup(popup_b852851c420447d58b9a7613b0bb0e7b)
+        ;
+
+        
+    
+    
+            var circle_marker_0620e6c4eb794d4f8499cc7c58b228e8 = L.circleMarker(
+                [43.15557757745337, -77.5797654228373],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_744f0d5fe14e46e2853bb330c63d4712 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9532100711fd47de8b109f340010eb86 = $(`<div id="html_9532100711fd47de8b109f340010eb86" style="width: 100.0%; height: 100.0%;">Upper Crust Cakery</div>`)[0];
+            popup_744f0d5fe14e46e2853bb330c63d4712.setContent(html_9532100711fd47de8b109f340010eb86);
+        
+
+        circle_marker_0620e6c4eb794d4f8499cc7c58b228e8.bindPopup(popup_744f0d5fe14e46e2853bb330c63d4712)
+        ;
+
+        
+    
+    
+            var circle_marker_c5ae95b5910547b08a3c69a2e1d2fe46 = L.circleMarker(
+                [43.084160033707136, -77.67629469313252],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_0f5e57072f9c46da9db82631491bd47e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5a954975a514d96a3e653e50156f851 = $(`<div id="html_b5a954975a514d96a3e653e50156f851" style="width: 100.0%; height: 100.0%;">Java Wally's</div>`)[0];
+            popup_0f5e57072f9c46da9db82631491bd47e.setContent(html_b5a954975a514d96a3e653e50156f851);
+        
+
+        circle_marker_c5ae95b5910547b08a3c69a2e1d2fe46.bindPopup(popup_0f5e57072f9c46da9db82631491bd47e)
+        ;
+
+        
+    
+    
+            var circle_marker_8df4011b0bba424db874245ddaa9a276 = L.circleMarker(
+                [43.08416822500572, -77.67500813151914],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_a9534d3757bd42c7b7bedc4fbb8ffc2d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7adf0cfe349f4347a24159556d77e0ce = $(`<div id="html_7adf0cfe349f4347a24159556d77e0ce" style="width: 100.0%; height: 100.0%;">Artesano Bakery and Cafe</div>`)[0];
+            popup_a9534d3757bd42c7b7bedc4fbb8ffc2d.setContent(html_7adf0cfe349f4347a24159556d77e0ce);
+        
+
+        circle_marker_8df4011b0bba424db874245ddaa9a276.bindPopup(popup_a9534d3757bd42c7b7bedc4fbb8ffc2d)
+        ;
+
+        
+    
+    
+            var circle_marker_83e021fdc80e4ff98fd667d337f77617 = L.circleMarker(
+                [43.084160033707136, -77.67629469313252],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_981c40e08f3443bb98d211fdde7f6860 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7090bd7df5b94fbfa204172395069030 = $(`<div id="html_7090bd7df5b94fbfa204172395069030" style="width: 100.0%; height: 100.0%;">Java Wally's</div>`)[0];
+            popup_981c40e08f3443bb98d211fdde7f6860.setContent(html_7090bd7df5b94fbfa204172395069030);
+        
+
+        circle_marker_83e021fdc80e4ff98fd667d337f77617.bindPopup(popup_981c40e08f3443bb98d211fdde7f6860)
+        ;
+
+        
+    
+    
+            var circle_marker_44fa4ab1ac00411fb754c98a4f425158 = L.circleMarker(
+                [43.08416822500572, -77.67500813151914],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_cff5894414c346e2b248ff068e4ece33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eba3af71f3594ccdaa4f7d670462c4ff = $(`<div id="html_eba3af71f3594ccdaa4f7d670462c4ff" style="width: 100.0%; height: 100.0%;">Artesano Bakery and Cafe</div>`)[0];
+            popup_cff5894414c346e2b248ff068e4ece33.setContent(html_eba3af71f3594ccdaa4f7d670462c4ff);
+        
+
+        circle_marker_44fa4ab1ac00411fb754c98a4f425158.bindPopup(popup_cff5894414c346e2b248ff068e4ece33)
+        ;
+
+        
+    
+    
+            var circle_marker_e3963b92cd6f4ebe9afa6e3fced7b78d = L.circleMarker(
+                [43.084160033707136, -77.67629469313252],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_8273efc4fca14450b825134adca298e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c10d39453e564a20a887ea95f7fa00a9 = $(`<div id="html_c10d39453e564a20a887ea95f7fa00a9" style="width: 100.0%; height: 100.0%;">Java Wally's</div>`)[0];
+            popup_8273efc4fca14450b825134adca298e8.setContent(html_c10d39453e564a20a887ea95f7fa00a9);
+        
+
+        circle_marker_e3963b92cd6f4ebe9afa6e3fced7b78d.bindPopup(popup_8273efc4fca14450b825134adca298e8)
+        ;
+
+        
+    
+    
+            var circle_marker_99331c32dba84c8da2c5adc71d8b5abf = L.circleMarker(
+                [43.08416822500572, -77.67500813151914],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_34eb0832b0bb4e43a0d6bc24c613c064 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f7ecb735e4b41d79117da00a868a866 = $(`<div id="html_6f7ecb735e4b41d79117da00a868a866" style="width: 100.0%; height: 100.0%;">Artesano Bakery and Cafe</div>`)[0];
+            popup_34eb0832b0bb4e43a0d6bc24c613c064.setContent(html_6f7ecb735e4b41d79117da00a868a866);
+        
+
+        circle_marker_99331c32dba84c8da2c5adc71d8b5abf.bindPopup(popup_34eb0832b0bb4e43a0d6bc24c613c064)
+        ;
+
+        
+    
+    
+            var circle_marker_1b8e191268a24ee3bc2ec5a42c3818bb = L.circleMarker(
+                [43.12278380486113, -77.62620695242403],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_2147f5f46fb04cae8a5b540b38e791b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1fa1c90032db4daba15de5da08329cbd = $(`<div id="html_1fa1c90032db4daba15de5da08329cbd" style="width: 100.0%; height: 100.0%;">Finger Lake Coffee Roasters</div>`)[0];
+            popup_2147f5f46fb04cae8a5b540b38e791b9.setContent(html_1fa1c90032db4daba15de5da08329cbd);
+        
+
+        circle_marker_1b8e191268a24ee3bc2ec5a42c3818bb.bindPopup(popup_2147f5f46fb04cae8a5b540b38e791b9)
+        ;
+
+        
+    
+    
+            var circle_marker_4a3113632b854dbf89cd38ed7e28fae4 = L.circleMarker(
+                [43.123090596925984, -77.62378463170577],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_a4dca90b1bb94c4db3eeb7e6be4c93a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9b495979146467b81721b176ea04e58 = $(`<div id="html_d9b495979146467b81721b176ea04e58" style="width: 100.0%; height: 100.0%;">Cafe 601</div>`)[0];
+            popup_a4dca90b1bb94c4db3eeb7e6be4c93a3.setContent(html_d9b495979146467b81721b176ea04e58);
+        
+
+        circle_marker_4a3113632b854dbf89cd38ed7e28fae4.bindPopup(popup_a4dca90b1bb94c4db3eeb7e6be4c93a3)
+        ;
+
+        
+    
+    
+            var circle_marker_8fd038cd7b3940f2ae15d47463db9a52 = L.circleMarker(
+                [43.12250556119747, -77.62285596942817],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_7446931af56b4fceba80e9fc3cacfa56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dacb0a25a9fb423589cdf30758077547 = $(`<div id="html_dacb0a25a9fb423589cdf30758077547" style="width: 100.0%; height: 100.0%;">West Winds Cafe</div>`)[0];
+            popup_7446931af56b4fceba80e9fc3cacfa56.setContent(html_dacb0a25a9fb423589cdf30758077547);
+        
+
+        circle_marker_8fd038cd7b3940f2ae15d47463db9a52.bindPopup(popup_7446931af56b4fceba80e9fc3cacfa56)
+        ;
+
+        
+    
+    
+            var circle_marker_80b8245ec6ea4b37bd15e70ad87d4ad1 = L.circleMarker(
+                [43.122489, -77.626401],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_96671e6ec5ec401a861b13d88a5a40b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_093dc60aabef4e95b25522d251e793af = $(`<div id="html_093dc60aabef4e95b25522d251e793af" style="width: 100.0%; height: 100.0%;">Metro Deli @ URMC</div>`)[0];
+            popup_96671e6ec5ec401a861b13d88a5a40b0.setContent(html_093dc60aabef4e95b25522d251e793af);
+        
+
+        circle_marker_80b8245ec6ea4b37bd15e70ad87d4ad1.bindPopup(popup_96671e6ec5ec401a861b13d88a5a40b0)
+        ;
+
+        
+    
+    
+            var circle_marker_9d0634ef3ef840cd82e57fededd5577f = L.circleMarker(
+                [43.101658831155575, -77.54125212786052],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_aece5728e74046e69dec55f2ef126065 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89ee68a2fb35425d94c9ced6b955dd1d = $(`<div id="html_89ee68a2fb35425d94c9ced6b955dd1d" style="width: 100.0%; height: 100.0%;">Finger Lakes Coffee Roasters</div>`)[0];
+            popup_aece5728e74046e69dec55f2ef126065.setContent(html_89ee68a2fb35425d94c9ced6b955dd1d);
+        
+
+        circle_marker_9d0634ef3ef840cd82e57fededd5577f.bindPopup(popup_aece5728e74046e69dec55f2ef126065)
+        ;
+
+        
+    
+    
+            var circle_marker_068c4bc1e5d8430bbc6a9111b97ccb4c = L.circleMarker(
+                [43.1020918361976, -77.54127186794679],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_0111263f97764d528f8732efcde982a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32dde54170bc44dfa752b73bcda1b201 = $(`<div id="html_32dde54170bc44dfa752b73bcda1b201" style="width: 100.0%; height: 100.0%;">Root 31</div>`)[0];
+            popup_0111263f97764d528f8732efcde982a2.setContent(html_32dde54170bc44dfa752b73bcda1b201);
+        
+
+        circle_marker_068c4bc1e5d8430bbc6a9111b97ccb4c.bindPopup(popup_0111263f97764d528f8732efcde982a2)
+        ;
+
+        
+    
+    
+            var circle_marker_fe924abd0c9146bcaef65e9f96669a83 = L.circleMarker(
+                [43.101658831155575, -77.54125212786052],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_a4e1394a2bbc41f6b0acabc94efff4ec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_602110210de14f4da3a7c8a8eb52875b = $(`<div id="html_602110210de14f4da3a7c8a8eb52875b" style="width: 100.0%; height: 100.0%;">Finger Lakes Coffee Roasters</div>`)[0];
+            popup_a4e1394a2bbc41f6b0acabc94efff4ec.setContent(html_602110210de14f4da3a7c8a8eb52875b);
+        
+
+        circle_marker_fe924abd0c9146bcaef65e9f96669a83.bindPopup(popup_a4e1394a2bbc41f6b0acabc94efff4ec)
+        ;
+
+        
+    
+    
+            var circle_marker_856e306ef83e4e0e91be4bb61b222574 = L.circleMarker(
+                [43.101658831155575, -77.54125212786052],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_deed8834dbe3427d9da9d37b69874f83 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e21af74aeb21409bbbcd079e5dbb84f3 = $(`<div id="html_e21af74aeb21409bbbcd079e5dbb84f3" style="width: 100.0%; height: 100.0%;">Finger Lakes Coffee Roasters</div>`)[0];
+            popup_deed8834dbe3427d9da9d37b69874f83.setContent(html_e21af74aeb21409bbbcd079e5dbb84f3);
+        
+
+        circle_marker_856e306ef83e4e0e91be4bb61b222574.bindPopup(popup_deed8834dbe3427d9da9d37b69874f83)
+        ;
+
+        
+    
+    
+            var circle_marker_7504c1eb851447548d075f2a0b26b21d = L.circleMarker(
+                [43.1020918361976, -77.54127186794679],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_54cf6c3c847745128777b5ee771f6d78 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b8154394d3b442d19bcf10ee6860df9e = $(`<div id="html_b8154394d3b442d19bcf10ee6860df9e" style="width: 100.0%; height: 100.0%;">Root 31</div>`)[0];
+            popup_54cf6c3c847745128777b5ee771f6d78.setContent(html_b8154394d3b442d19bcf10ee6860df9e);
+        
+
+        circle_marker_7504c1eb851447548d075f2a0b26b21d.bindPopup(popup_54cf6c3c847745128777b5ee771f6d78)
+        ;
+
+        
+    
+    
+            var circle_marker_7f848d24958142d7aafcdaae2028a086 = L.circleMarker(
+                [43.10394393018154, -77.54077434539795],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_a2c27b78d6e3423fabe6c79bceba5713 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d4cdf13cb554470b2e8c99ba9285ce1 = $(`<div id="html_1d4cdf13cb554470b2e8c99ba9285ce1" style="width: 100.0%; height: 100.0%;">Barnes & Noble Cafe</div>`)[0];
+            popup_a2c27b78d6e3423fabe6c79bceba5713.setContent(html_1d4cdf13cb554470b2e8c99ba9285ce1);
+        
+
+        circle_marker_7f848d24958142d7aafcdaae2028a086.bindPopup(popup_a2c27b78d6e3423fabe6c79bceba5713)
+        ;
+
+        
+    
+    
+            var circle_marker_51fae7f9787045deabf5981d32f3a52d = L.circleMarker(
+                [43.12820646273162, -77.44051099140165],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_f22a303e495e4dd7803174c99e3f2568 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c94d6cbc6554c1daaa59bcf111bf8f2 = $(`<div id="html_7c94d6cbc6554c1daaa59bcf111bf8f2" style="width: 100.0%; height: 100.0%;">Panera Bread</div>`)[0];
+            popup_f22a303e495e4dd7803174c99e3f2568.setContent(html_7c94d6cbc6554c1daaa59bcf111bf8f2);
+        
+
+        circle_marker_51fae7f9787045deabf5981d32f3a52d.bindPopup(popup_f22a303e495e4dd7803174c99e3f2568)
+        ;
+
+        
+    
+    
+            var circle_marker_c100beb9469742cd8f340fa71d220e6f = L.circleMarker(
+                [43.12846112289858, -77.44330823421478],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_9c8f43eef47643d7b001a55994ee3290 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c72aad85ad14a148b65d9b791593cea = $(`<div id="html_0c72aad85ad14a148b65d9b791593cea" style="width: 100.0%; height: 100.0%;">Starbucks</div>`)[0];
+            popup_9c8f43eef47643d7b001a55994ee3290.setContent(html_0c72aad85ad14a148b65d9b791593cea);
+        
+
+        circle_marker_c100beb9469742cd8f340fa71d220e6f.bindPopup(popup_9c8f43eef47643d7b001a55994ee3290)
+        ;
+
+        
+    
+    
+            var circle_marker_fad59ce3596b44489e27154f1dc88a48 = L.circleMarker(
+                [43.128400620752586, -77.44332100399981],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_aa578935be394f069f2faba64dcf4b69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e76e02af97464ca88f2dccda69e96743 = $(`<div id="html_e76e02af97464ca88f2dccda69e96743" style="width: 100.0%; height: 100.0%;">Starbucks</div>`)[0];
+            popup_aa578935be394f069f2faba64dcf4b69.setContent(html_e76e02af97464ca88f2dccda69e96743);
+        
+
+        circle_marker_fad59ce3596b44489e27154f1dc88a48.bindPopup(popup_aa578935be394f069f2faba64dcf4b69)
+        ;
+
+        
+    
+    
+            var circle_marker_e342392a6a1643dda63d121408e7c1fb = L.circleMarker(
+                [43.12820646273162, -77.44051099140165],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_9d1d8eb1abea44f6924df14c75237a7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f6d98138196e43a7a357e7f37e8ef1ef = $(`<div id="html_f6d98138196e43a7a357e7f37e8ef1ef" style="width: 100.0%; height: 100.0%;">Panera Bread</div>`)[0];
+            popup_9d1d8eb1abea44f6924df14c75237a7b.setContent(html_f6d98138196e43a7a357e7f37e8ef1ef);
+        
+
+        circle_marker_e342392a6a1643dda63d121408e7c1fb.bindPopup(popup_9d1d8eb1abea44f6924df14c75237a7b)
+        ;
+
+        
+    
+    
+            var circle_marker_5719704f7f7148638c6f3d8dab06d6b1 = L.circleMarker(
+                [43.206482559437525, -77.69113090978189],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_4d4a611105cd4cd7ae56bb1f454cdcf0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd682a9cde944483b889469b366f9b38 = $(`<div id="html_dd682a9cde944483b889469b366f9b38" style="width: 100.0%; height: 100.0%;">Gloria Jean's Coffees</div>`)[0];
+            popup_4d4a611105cd4cd7ae56bb1f454cdcf0.setContent(html_dd682a9cde944483b889469b366f9b38);
+        
+
+        circle_marker_5719704f7f7148638c6f3d8dab06d6b1.bindPopup(popup_4d4a611105cd4cd7ae56bb1f454cdcf0)
+        ;
+
+        
+    
+    
+            var circle_marker_8cfd42813e7b4c0dbea5136dbbf73809 = L.circleMarker(
+                [43.206482559437525, -77.69113090978189],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_7cd3c496d88f4e02acdb280fbb69c20b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_803c41ba15054eeaaa601530bd4b56ec = $(`<div id="html_803c41ba15054eeaaa601530bd4b56ec" style="width: 100.0%; height: 100.0%;">Gloria Jean's Coffees</div>`)[0];
+            popup_7cd3c496d88f4e02acdb280fbb69c20b.setContent(html_803c41ba15054eeaaa601530bd4b56ec);
+        
+
+        circle_marker_8cfd42813e7b4c0dbea5136dbbf73809.bindPopup(popup_7cd3c496d88f4e02acdb280fbb69c20b)
+        ;
+
+        
+    
+    
+            var circle_marker_b92e051b05e94098ba6788b6aa1856a7 = L.circleMarker(
+                [43.20856428980776, -77.68909054679722],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_c24e98e9903243748b59c83e485bfcaa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c32850b48eea4ec2b9c8b86d61e81cc0 = $(`<div id="html_c32850b48eea4ec2b9c8b86d61e81cc0" style="width: 100.0%; height: 100.0%;">Panera Bread</div>`)[0];
+            popup_c24e98e9903243748b59c83e485bfcaa.setContent(html_c32850b48eea4ec2b9c8b86d61e81cc0);
+        
+
+        circle_marker_b92e051b05e94098ba6788b6aa1856a7.bindPopup(popup_c24e98e9903243748b59c83e485bfcaa)
+        ;
+
+        
+    
+    
+            var circle_marker_3b651237706046949d0fe337e6ebdc10 = L.circleMarker(
+                [43.206482559437525, -77.69113090978189],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_40b5eab8cf4543f9b09529c37e104157 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_203fc1c03a8c47b58d99337e4ebe4fe3 = $(`<div id="html_203fc1c03a8c47b58d99337e4ebe4fe3" style="width: 100.0%; height: 100.0%;">Gloria Jean's Coffees</div>`)[0];
+            popup_40b5eab8cf4543f9b09529c37e104157.setContent(html_203fc1c03a8c47b58d99337e4ebe4fe3);
+        
+
+        circle_marker_3b651237706046949d0fe337e6ebdc10.bindPopup(popup_40b5eab8cf4543f9b09529c37e104157)
+        ;
+
+        
+    
+    
+            var circle_marker_1518d3b2d29349d98bb290ceaad0bd0f = L.circleMarker(
+                [43.150002, -77.589923],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_8168337372e04754bb030ee651d31d11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7df568298636461ea53e88376d93f47a = $(`<div id="html_7df568298636461ea53e88376d93f47a" style="width: 100.0%; height: 100.0%;">The Mad Hatter</div>`)[0];
+            popup_8168337372e04754bb030ee651d31d11.setContent(html_7df568298636461ea53e88376d93f47a);
+        
+
+        circle_marker_1518d3b2d29349d98bb290ceaad0bd0f.bindPopup(popup_8168337372e04754bb030ee651d31d11)
+        ;
+
+        
+    
+    
+            var circle_marker_8735f76e464b48f188144888f53d2368 = L.circleMarker(
+                [43.14981271431822, -77.58603636929492],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_8f7adba1a44f45629698538e97b08ff2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11ff908c59cf44e9bbd1be98af1434a7 = $(`<div id="html_11ff908c59cf44e9bbd1be98af1434a7" style="width: 100.0%; height: 100.0%;">Magnolia's Deli and Cafe</div>`)[0];
+            popup_8f7adba1a44f45629698538e97b08ff2.setContent(html_11ff908c59cf44e9bbd1be98af1434a7);
+        
+
+        circle_marker_8735f76e464b48f188144888f53d2368.bindPopup(popup_8f7adba1a44f45629698538e97b08ff2)
+        ;
+
+        
+    
+    
+            var circle_marker_8cbdbfc6e78b4ebdb91e0e54a7f0d6b8 = L.circleMarker(
+                [43.15040419100265, -77.58890872453682],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_518d73d48b2e41a69b35127a567f042e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a71c5f4c0c934f6983309c4c948df107 = $(`<div id="html_a71c5f4c0c934f6983309c4c948df107" style="width: 100.0%; height: 100.0%;">Roam Café</div>`)[0];
+            popup_518d73d48b2e41a69b35127a567f042e.setContent(html_a71c5f4c0c934f6983309c4c948df107);
+        
+
+        circle_marker_8cbdbfc6e78b4ebdb91e0e54a7f0d6b8.bindPopup(popup_518d73d48b2e41a69b35127a567f042e)
+        ;
+
+        
+    
+    
+            var circle_marker_cae03415c5984e3fbe75a91bd3680606 = L.circleMarker(
+                [43.14981271431822, -77.58603636929492],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_dd5437119a3b4e979af0ff5702933d24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b83cf532cc4474a8d2bb2f382157c8f = $(`<div id="html_7b83cf532cc4474a8d2bb2f382157c8f" style="width: 100.0%; height: 100.0%;">Magnolia's Deli and Cafe</div>`)[0];
+            popup_dd5437119a3b4e979af0ff5702933d24.setContent(html_7b83cf532cc4474a8d2bb2f382157c8f);
+        
+
+        circle_marker_cae03415c5984e3fbe75a91bd3680606.bindPopup(popup_dd5437119a3b4e979af0ff5702933d24)
+        ;
+
+        
+    
+    
+            var circle_marker_0a6ac8924b9040d99b5ea966143f1572 = L.circleMarker(
+                [43.15239296859085, -77.587527524153],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ee7046201b2b4c548687e8fcb475bda2);
+        
+    
+        var popup_040b5299faed48eb878daa1340088cc9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51d5bccaa9264c1ba4baa40285e465de = $(`<div id="html_51d5bccaa9264c1ba4baa40285e465de" style="width: 100.0%; height: 100.0%;">Mario's Café</div>`)[0];
+            popup_040b5299faed48eb878daa1340088cc9.setContent(html_51d5bccaa9264c1ba4baa40285e465de);
+        
+
+        circle_marker_0a6ac8924b9040d99b5ea966143f1572.bindPopup(popup_040b5299faed48eb878daa1340088cc9)
+        ;
+
+        
+    
+    
+            var feature_group_dfe55ee8bc52445382d17a121f2aff7f = L.featureGroup(
+                {}
+            ).addTo(map_a8cc2dd081c74b30b8bbbe6fed42a1a8);
+        
+    
+            var circle_marker_6eaf91f03c7c4702b7587ce4ba22d070 = L.circleMarker(
+                [43.20932293264721, -77.45365417789581],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_68edca0fbbfb48a787a58e6d4022c65d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9e00572e5af74431a7f031740f70d7e4 = $(`<div id="html_9e00572e5af74431a7f031740f70d7e4" style="width: 100.0%; height: 100.0%;">Bruster's Real Ice Cream</div>`)[0];
+            popup_68edca0fbbfb48a787a58e6d4022c65d.setContent(html_9e00572e5af74431a7f031740f70d7e4);
+        
+
+        circle_marker_6eaf91f03c7c4702b7587ce4ba22d070.bindPopup(popup_68edca0fbbfb48a787a58e6d4022c65d)
+        ;
+
+        
+    
+    
+            var circle_marker_2d1d5fca64cf4c7fb24d771e54a12ad7 = L.circleMarker(
+                [43.20975641441964, -77.46049741100354],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_8900e5114db44421b6c18218b063dfaf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d712a7815ffa4c78a4f876fb90521436 = $(`<div id="html_d712a7815ffa4c78a4f876fb90521436" style="width: 100.0%; height: 100.0%;">Yolickity Frozen Dessert Zone - Webster</div>`)[0];
+            popup_8900e5114db44421b6c18218b063dfaf.setContent(html_d712a7815ffa4c78a4f876fb90521436);
+        
+
+        circle_marker_2d1d5fca64cf4c7fb24d771e54a12ad7.bindPopup(popup_8900e5114db44421b6c18218b063dfaf)
+        ;
+
+        
+    
+    
+            var circle_marker_4e13858844054e94bde0c47737ae8622 = L.circleMarker(
+                [43.21277376379849, -77.4621132016182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_dd27fed307ca4005bb63af4dda0f60b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac908c1adccd49c0bfce0c36e02592ec = $(`<div id="html_ac908c1adccd49c0bfce0c36e02592ec" style="width: 100.0%; height: 100.0%;">Dairy Queen Grill & Chill</div>`)[0];
+            popup_dd27fed307ca4005bb63af4dda0f60b9.setContent(html_ac908c1adccd49c0bfce0c36e02592ec);
+        
+
+        circle_marker_4e13858844054e94bde0c47737ae8622.bindPopup(popup_dd27fed307ca4005bb63af4dda0f60b9)
+        ;
+
+        
+    
+    
+            var circle_marker_d80c01ff8ea54b99a551a2588c24112a = L.circleMarker(
+                [43.211932, -77.454628],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_5a5448008c8a41c682df92eb21ec7c5b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42617baf37bf49cba85051a9fb4770a1 = $(`<div id="html_42617baf37bf49cba85051a9fb4770a1" style="width: 100.0%; height: 100.0%;">Cold Stone Creamery</div>`)[0];
+            popup_5a5448008c8a41c682df92eb21ec7c5b.setContent(html_42617baf37bf49cba85051a9fb4770a1);
+        
+
+        circle_marker_d80c01ff8ea54b99a551a2588c24112a.bindPopup(popup_5a5448008c8a41c682df92eb21ec7c5b)
+        ;
+
+        
+    
+    
+            var circle_marker_69771a1913c547a1b569ba56a1e9dd43 = L.circleMarker(
+                [43.10161590178071, -77.44291898382998],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_3d9a49d3ad504ee1bcde3450aa89bc3c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e674db16fc7a4991a51215f9e0b5a2ab = $(`<div id="html_e674db16fc7a4991a51215f9e0b5a2ab" style="width: 100.0%; height: 100.0%;">Moonlight Creamery</div>`)[0];
+            popup_3d9a49d3ad504ee1bcde3450aa89bc3c.setContent(html_e674db16fc7a4991a51215f9e0b5a2ab);
+        
+
+        circle_marker_69771a1913c547a1b569ba56a1e9dd43.bindPopup(popup_3d9a49d3ad504ee1bcde3450aa89bc3c)
+        ;
+
+        
+    
+    
+            var circle_marker_133c317d10f44f06b96ab1ba282c6cd3 = L.circleMarker(
+                [43.1039892, -77.4414472],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_7188a025f497495bbb9008cd36bde44b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5a8320af0fc4fef804ef53e3cec1ed0 = $(`<div id="html_d5a8320af0fc4fef804ef53e3cec1ed0" style="width: 100.0%; height: 100.0%;">Yummies</div>`)[0];
+            popup_7188a025f497495bbb9008cd36bde44b.setContent(html_d5a8320af0fc4fef804ef53e3cec1ed0);
+        
+
+        circle_marker_133c317d10f44f06b96ab1ba282c6cd3.bindPopup(popup_7188a025f497495bbb9008cd36bde44b)
+        ;
+
+        
+    
+    
+            var circle_marker_ddf20b5b25964b378585194f24330eb1 = L.circleMarker(
+                [43.10177005874439, -77.44113872310277],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_e0bbfa66b7ee46a3a7a1db85fa92a171 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa3194842c7b4c13bda3b1b5d4df9456 = $(`<div id="html_aa3194842c7b4c13bda3b1b5d4df9456" style="width: 100.0%; height: 100.0%;">Ice Cream Factory</div>`)[0];
+            popup_e0bbfa66b7ee46a3a7a1db85fa92a171.setContent(html_aa3194842c7b4c13bda3b1b5d4df9456);
+        
+
+        circle_marker_ddf20b5b25964b378585194f24330eb1.bindPopup(popup_e0bbfa66b7ee46a3a7a1db85fa92a171)
+        ;
+
+        
+    
+    
+            var circle_marker_ab4de50c59d14f11a668fb2524b78c7d = L.circleMarker(
+                [43.13468200535871, -77.49775792450146],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_bc249bdac41b4dc580743120ac155a74 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c4b3d9be3a744efdb2a092cea0061d5d = $(`<div id="html_c4b3d9be3a744efdb2a092cea0061d5d" style="width: 100.0%; height: 100.0%;">What's 'Ur Scoop</div>`)[0];
+            popup_bc249bdac41b4dc580743120ac155a74.setContent(html_c4b3d9be3a744efdb2a092cea0061d5d);
+        
+
+        circle_marker_ab4de50c59d14f11a668fb2524b78c7d.bindPopup(popup_bc249bdac41b4dc580743120ac155a74)
+        ;
+
+        
+    
+    
+            var circle_marker_08aed1c19e1a49beb3a03ab38e1f1c1f = L.circleMarker(
+                [43.13362484146583, -77.49311507542822],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_19f6db037c5c40a096c1168e6352d4dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_853c8d671e454f3ba7e25e519487133d = $(`<div id="html_853c8d671e454f3ba7e25e519487133d" style="width: 100.0%; height: 100.0%;">Abbott's Frozen Custard</div>`)[0];
+            popup_19f6db037c5c40a096c1168e6352d4dd.setContent(html_853c8d671e454f3ba7e25e519487133d);
+        
+
+        circle_marker_08aed1c19e1a49beb3a03ab38e1f1c1f.bindPopup(popup_19f6db037c5c40a096c1168e6352d4dd)
+        ;
+
+        
+    
+    
+            var circle_marker_68144a4fa92d4d7fa5dd8f27b6c7cc87 = L.circleMarker(
+                [43.1332262984537, -77.4913146551384],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_8f4211eb6203447fba02e5accb4fbb1b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f540d524b214e5c9a3aa39ae2ab9565 = $(`<div id="html_2f540d524b214e5c9a3aa39ae2ab9565" style="width: 100.0%; height: 100.0%;">Abbott's Frozen Custard</div>`)[0];
+            popup_8f4211eb6203447fba02e5accb4fbb1b.setContent(html_2f540d524b214e5c9a3aa39ae2ab9565);
+        
+
+        circle_marker_68144a4fa92d4d7fa5dd8f27b6c7cc87.bindPopup(popup_8f4211eb6203447fba02e5accb4fbb1b)
+        ;
+
+        
+    
+    
+            var circle_marker_ae6a480f85314e30afd80b9a966b0787 = L.circleMarker(
+                [43.23443500768102, -77.53784109409735],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_a65f8d3222ac4012af8e403f32fad69a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f4385fcf3b9475d99179cd6765169f0 = $(`<div id="html_5f4385fcf3b9475d99179cd6765169f0" style="width: 100.0%; height: 100.0%;">Don's Original: Sea Breeze</div>`)[0];
+            popup_a65f8d3222ac4012af8e403f32fad69a.setContent(html_5f4385fcf3b9475d99179cd6765169f0);
+        
+
+        circle_marker_ae6a480f85314e30afd80b9a966b0787.bindPopup(popup_a65f8d3222ac4012af8e403f32fad69a)
+        ;
+
+        
+    
+    
+            var circle_marker_e3d14456926e43ef8a64931c9c2af6c0 = L.circleMarker(
+                [43.23440098939115, -77.53968645359376],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_827fb0ab3abc481daa83af9951f9f7e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_40271fde51a24ffda81cce1871efaf69 = $(`<div id="html_40271fde51a24ffda81cce1871efaf69" style="width: 100.0%; height: 100.0%;">Abbott's</div>`)[0];
+            popup_827fb0ab3abc481daa83af9951f9f7e3.setContent(html_40271fde51a24ffda81cce1871efaf69);
+        
+
+        circle_marker_e3d14456926e43ef8a64931c9c2af6c0.bindPopup(popup_827fb0ab3abc481daa83af9951f9f7e3)
+        ;
+
+        
+    
+    
+            var circle_marker_903c0fd848a44d8eb8df1b3208c8f893 = L.circleMarker(
+                [43.233577951389464, -77.54311350653713],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_d4a81c0df41f44019cdfd487b7167894 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5c4041f22f344279c2747bde99b0e0a = $(`<div id="html_e5c4041f22f344279c2747bde99b0e0a" style="width: 100.0%; height: 100.0%;">Seabreeze - Dippin' Dots</div>`)[0];
+            popup_d4a81c0df41f44019cdfd487b7167894.setContent(html_e5c4041f22f344279c2747bde99b0e0a);
+        
+
+        circle_marker_903c0fd848a44d8eb8df1b3208c8f893.bindPopup(popup_d4a81c0df41f44019cdfd487b7167894)
+        ;
+
+        
+    
+    
+            var circle_marker_8c8e618406844842a53139be2504cd6a = L.circleMarker(
+                [43.08647428262482, -77.62785800233333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_b26663105d8e4f8a85639e041c65294a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d4c36b7974554c2c8bb0b2cb06d95220 = $(`<div id="html_d4c36b7974554c2c8bb0b2cb06d95220" style="width: 100.0%; height: 100.0%;">Cold Stone Creamery</div>`)[0];
+            popup_b26663105d8e4f8a85639e041c65294a.setContent(html_d4c36b7974554c2c8bb0b2cb06d95220);
+        
+
+        circle_marker_8c8e618406844842a53139be2504cd6a.bindPopup(popup_b26663105d8e4f8a85639e041c65294a)
+        ;
+
+        
+    
+    
+            var circle_marker_024223fc195c406e9032d52b33b399f1 = L.circleMarker(
+                [43.084942131127235, -77.63346346031948],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_adda503d479e4128a18aa57fb3651e0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea260b7d65244bbdbfb66dc33bcc3db4 = $(`<div id="html_ea260b7d65244bbdbfb66dc33bcc3db4" style="width: 100.0%; height: 100.0%;">Friendly's</div>`)[0];
+            popup_adda503d479e4128a18aa57fb3651e0e.setContent(html_ea260b7d65244bbdbfb66dc33bcc3db4);
+        
+
+        circle_marker_024223fc195c406e9032d52b33b399f1.bindPopup(popup_adda503d479e4128a18aa57fb3651e0e)
+        ;
+
+        
+    
+    
+            var circle_marker_b0989b9cfd58467fb32bf3b53b224a34 = L.circleMarker(
+                [43.084877, -77.62246],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_bf68207023d14de39dfd1659330fb0c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91956983c36c4f7d8385d61ac5e70735 = $(`<div id="html_91956983c36c4f7d8385d61ac5e70735" style="width: 100.0%; height: 100.0%;">Abbot's Frozen Custard</div>`)[0];
+            popup_bf68207023d14de39dfd1659330fb0c3.setContent(html_91956983c36c4f7d8385d61ac5e70735);
+        
+
+        circle_marker_b0989b9cfd58467fb32bf3b53b224a34.bindPopup(popup_bf68207023d14de39dfd1659330fb0c3)
+        ;
+
+        
+    
+    
+            var circle_marker_c5438e1675974018bd4406bcc31bce2d = L.circleMarker(
+                [43.12510297202852, -77.61693592720583],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_57a4769df4454597b6b06000614dce89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_910abd0c06a649a8a89399fcbf8c3035 = $(`<div id="html_910abd0c06a649a8a89399fcbf8c3035" style="width: 100.0%; height: 100.0%;">Cold Stone Creamery</div>`)[0];
+            popup_57a4769df4454597b6b06000614dce89.setContent(html_910abd0c06a649a8a89399fcbf8c3035);
+        
+
+        circle_marker_c5438e1675974018bd4406bcc31bce2d.bindPopup(popup_57a4769df4454597b6b06000614dce89)
+        ;
+
+        
+    
+    
+            var circle_marker_4294ab205ce94914b3bf9887d9d52ce1 = L.circleMarker(
+                [43.12517454119667, -77.61666841640121],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_a22ad8046e3e4836a4dec46f56e6157d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a1d19ca2dc014442ad6d1c1e3298db87 = $(`<div id="html_a1d19ca2dc014442ad6d1c1e3298db87" style="width: 100.0%; height: 100.0%;">Coldstone Creamery</div>`)[0];
+            popup_a22ad8046e3e4836a4dec46f56e6157d.setContent(html_a1d19ca2dc014442ad6d1c1e3298db87);
+        
+
+        circle_marker_4294ab205ce94914b3bf9887d9d52ce1.bindPopup(popup_a22ad8046e3e4836a4dec46f56e6157d)
+        ;
+
+        
+    
+    
+            var circle_marker_acebb8a67f86410c9ac141873130dbf7 = L.circleMarker(
+                [43.12392624511567, -77.61763857892373],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_dfe55ee8bc52445382d17a121f2aff7f);
+        
+    
+        var popup_a8c036f70c264792bb26a78c41f9a2d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cf6b3e6b1bd469d96361ac9c75df767 = $(`<div id="html_8cf6b3e6b1bd469d96361ac9c75df767" style="width: 100.0%; height: 100.0%;">Abbott's Frozen Custard</div>`)[0];
+            popup_a8c036f70c264792bb26a78c41f9a2d9.setContent(html_8cf6b3e6b1bd469d96361ac9c75df767);
+        
+
+        circle_marker_acebb8a67f86410c9ac141873130dbf7.bindPopup(popup_a8c036f70c264792bb26a78c41f9a2d9)
+        ;
+
+        
+    
+    
+            var layer_control_16c04f1672894f5ab94550af131f34a8 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_dcc9d553d3314bfc91350fc3e7f699db,
+                },
+                overlays :  {
+                    "Beer" : feature_group_db4d7d688d7945ab95fae2d8ab342193,
+                    "Cafe" : feature_group_ee7046201b2b4c548687e8fcb475bda2,
+                    "Ice Cream" : feature_group_dfe55ee8bc52445382d17a121f2aff7f,
+                },
+            };
+            L.control.layers(
+                layer_control_16c04f1672894f5ab94550af131f34a8.base_layers,
+                layer_control_16c04f1672894f5ab94550af131f34a8.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_a8cc2dd081c74b30b8bbbe6fed42a1a8);
+        
+</script>
